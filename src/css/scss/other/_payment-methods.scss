@@ -1,0 +1,25 @@
+.payment-methods {
+    font-family: 'Brands';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    @include tablet {
+        justify-content: center;
+        max-width: 700px;
+    }
+
+    &_item {
+        color: #30353c;
+        display: inline-block;
+        flex-basis: 50%;
+        font-size: 56px;
+        line-height: 56px;
+        margin: 0 0 0;
+        text-align: center;
+        @include tablet {
+            margin: 0 0 30px;
+            flex-basis: inherit;
+        }
+    }
+}

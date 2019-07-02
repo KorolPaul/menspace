@@ -1,0 +1,22 @@
+.lang {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    @include tablet {
+        min-width: 100px;
+        position: static;
+        margin: 0 0 0 30px;
+        top: 20px;
+    }
+}
+
+.flag-icon {
+    height: 16px;
+    width: 24px;
+    display: inline-block;
+    margin: -1px 4px 0 0;
+    vertical-align: top;
+    @include tablet {
+        margin-right: 8px;
+    }
+}

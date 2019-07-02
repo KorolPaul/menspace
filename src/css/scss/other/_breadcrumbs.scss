@@ -1,0 +1,22 @@
+.breadcrumbs {
+    text-align: right;
+    margin: 0 0 14px;
+    @include tablet {
+        margin-bottom: 28px;
+    }
+
+    &_link {
+        color: #4b535c;
+
+        &::after {
+            content: '\203A';
+            color: $bright_color;
+            font-size: 24px;
+            margin: 0 4px 0 8px;
+            vertical-align: -1px;
+        }
+    }
+    &_page {
+        color: $bright_color;
+    }
+}

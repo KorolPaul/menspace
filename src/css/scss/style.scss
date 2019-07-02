@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@import  "const";
+@import  "mixins";
+@import  "placeholders";
+
+/* basic */
+@import  "basic/normalize";
+@import  "basic/fonts";
+@import  "basic/font-awesome";
+@import  "basic/default";
+
+/*Form elements*/
+@import  "form-elements/button";
+@import  "form-elements/input-text";
+@import  "form-elements/textarea";
+@import  "form-elements/radio";
+@import  "form-elements/checkbox";
+@import  "form-elements/label";
+@import  "form-elements/form";
+@import  "form-elements/phone";
+@import  "form-elements/balance";
+@import  "form-elements/bright-button";
+
+
+/*layout*/
+@import  "layout/headings";
+@import  "layout/header";
+@import  "layout/footer";
+@import  "layout/footer-menu";
+@import  "layout/menu";
+@import  "layout/menu-toggle";
+@import  "layout/logo";
+@import  "layout/content";
+@import  "layout/popup";
+@import  "layout/fade";
+@import  "layout/title";
+@import  "layout/lang";
+@import  "layout/dashboard";
+@import  "layout/tab";
+@import  "layout/info";
+@import  "layout/slider";
+@import  "layout/loader";
+@import  "layout/page-404";
+@import  "layout/alert";
+
+
+/*Other*/
+@import  "other/payment-methods";
+@import  "other/breadcrumbs";
+@import  "other/pages";
+@import  "other/switch";
+@import  "other/card";
+@import  "other/winners";
+@import  "other/jackpots";
+@import  "other/bonuses";
+@import  "other/account";
+@import  "other/user";
+@import  "other/games-menu";
+@import  "other/bonus-widget";
+
+
+/*Plugins*/
+@import  "plugins/slick";
+@import  "plugins/choices";

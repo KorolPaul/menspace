@@ -1,0 +1,34 @@
+%heading-1 {
+    color: $light_color;
+    font: 25px $font-family;
+    margin: 40px 0 20px;
+    @include tablet {
+        font: 32px $font-family;
+    }
+}
+%heading-2 {
+    color: $light_color;
+    font: 18px $font-family;
+    margin: 40px 0 20px;
+    @include tablet {
+        font: 22px $font-family;
+    }
+}
+%heading-3 {
+    color: $bright_color;
+    font: 16px $font-family;
+    margin: 0;
+}
+
+h1,
+.heading-1 {
+    @extend %heading-1;
+}
+h2,
+.heading-2 {
+    @extend %heading-2;
+}
+h3,
+.heading-3 {
+    @extend %heading-3;
+}

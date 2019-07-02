@@ -1,0 +1,105 @@
+.dashboard {
+    margin: 0 0 80px;
+    @include desktop {
+        margin: 0 0 40px;
+    }
+
+    &_grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 20px;
+        text-align: inherit;
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 50px;
+            margin: 0;
+        }
+    }
+    &_items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 20px;
+        text-align: inherit;
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 50px;
+            margin: 0;
+        }
+    }
+    &_filters {
+        margin: 0 0 24px;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; 
+        }
+    }
+    &_filters-section {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        & > * + * {
+            @include tablet {
+                margin-left: 16px;
+            }
+        }
+
+        &:first-child {
+            margin-bottom: 24px;
+            @include tablet {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    &_button-wrapper {
+        width: 100%;
+        text-align: center;
+        @include desktop {
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+    }
+    &_button {
+        @extend .button__secondary;
+        padding-left: 75px;
+        padding-right: 75px;
+        margin: 0 auto 20px;
+        position: relative;
+        z-index: 1;
+        @include tablet {
+            margin-top: 6px;
+        }
+        @include desktop {
+            .dashboard_grid & {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        &.loading {
+            color: transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -12px 0 0 -12px;
+                background: url(../img/icons/sync-red.svg) 0 0 no-repeat;
+                background-size: 100% auto;
+                width: 24px;
+                height: 24px;
+                animation: 1s linear rotation infinite;
+            }
+        }
+    }
+}

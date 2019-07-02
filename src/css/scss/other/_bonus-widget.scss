@@ -1,0 +1,107 @@
+.bonus-widget {
+    width: 100%;
+    border: 2px solid $bright_color;
+    box-shadow: 0 0 10px rgba($bright_color, .1);
+    border-radius: 13px;
+    padding: 15px 25px;
+    flex-shrink: 4;
+    position: relative;
+    @include desktop {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: auto;
+    }
+
+    .account & {
+        width: auto;
+        margin: 20px 0 30px;
+    }
+
+    &__dark {
+        border-color: #2f2f2f;
+        box-shadow: 0 0 10px rgba(#2f2f2f, .1);
+    }
+
+    &_refresh {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    &_title {
+        color: $light_color;
+        font-size: 22px;
+        line-height: 1;
+        margin: 0 0 15px;
+    }
+    &_text {
+        color: $light_color;
+        font-style: italic;
+        display: block;
+        margin: 0 0 10px;
+
+        .bonus-widget__dark & {
+            color: #3d4044;
+        }
+    }
+    &_bright-text {
+        @include gradiented-text(#fc6c4f, #d82e32);
+        font-style: normal;
+        font-weight: 600;
+        text-shadow: 0 0 16px rgba(#ef1414, .75), 0 0 2px rgba(#ef1414, .75);
+        margin: 0 0 0 9px;
+        white-space: nowrap;
+        
+        .bonus-widget__dark & {
+            color: #3d4044;
+            text-shadow: none;
+            background: transparent;
+            -webkit-background-clip: none;
+            -webkit-text-fill-color: inherit;
+        }
+    }
+    &_link {
+        white-space: nowrap;
+    }
+    &_progress-bar {
+        border: 1px solid #000;
+        border-radius: 12px;
+        background: linear-gradient(to bottom, #060606, #181818);
+        box-shadow: 0 1px 1px rgba(255, 255, 255, .2),
+                    0 1px 1px rgba(255, 255, 255, .1) inset,
+                    0 0 20px rgba(255, 255, 255, .05);
+        height: 25px;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+    &_progress {
+        height: 100%;
+        background: linear-gradient(to right, #bc0d09, #e34730);
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #ea292e,
+                    0 3px 2px rgba(255, 255, 255, .2) inset;
+
+        &::before {
+            content: '';
+            background: url(#{$img-path}/progress-bg.png) repeat-x 0 center;
+            background-size: auto 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        &::after {
+            content: '';
+            background: url(#{$img-path}/light.png) no-repeat center center;
+            height: 41px;
+            width: 41px;
+            position: absolute;
+            top: 0;
+            right:  0;
+            margin: -13px -15px 0 0;
+        }
+    }
+}

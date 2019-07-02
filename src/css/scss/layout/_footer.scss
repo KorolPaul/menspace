@@ -1,0 +1,101 @@
+.footer {
+    margin: 50px 0 0;
+    position: relative;
+    @include tablet {
+        margin-top: 60px;
+    }
+
+    &::before {
+        content: '';
+        background: url(#{$img-path}/slider-line.png) no-repeat center top;
+        background-size: 100% auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10.5vw;
+        height: 4vw;
+        @include tablet {
+            top: -5.5vw;
+        }
+
+        .page-404 & {
+            display: none;
+        }
+    }
+
+    &_top {
+        @include layout;
+    }
+    &_bottom {
+        border-top: 1px solid $gray_color;
+        padding: 16px 10px 10px;
+        text-align: center;
+        @include tablet {
+            padding: 16px;
+        }
+
+        .page-404 & {
+            border-top: none;
+        }
+    }
+
+    &_info {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0 0;
+        justify-content: center;
+        @include tablet {
+            margin: 0 0 20px;
+            flex-wrap: nowrap;
+            justify-content: inherit;
+        }
+    }
+    &_info-text {
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+        order: 1;
+        margin: 0 0 10px;
+        @include tablet {
+            font-size: 14px;
+            width: auto;
+            order: inherit;
+            margin: 0 30px;
+        }
+    }
+    &_info-icon {
+        width: 56px;
+        flex-shrink: 0;
+        margin: 25px 16px 5px;
+        @include tablet {
+            margin: 0;
+        }
+    }
+    &_info-link {
+        flex-shrink: 0;
+        display: inline-block;
+    }
+    .footer_info-license {
+        width: 62px;
+        flex-shrink: 0;
+        margin: 25px 25px 5px 0;
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &_logo {
+        display: inline-block;
+        margin: 0 0 10px;
+        width: 110px;
+        @include tablet {
+            width: 182px;
+            margin: 0 0 20px;
+        }
+    }
+    &_copyright {
+        font-size: 14px;
+        color: #30353c;
+    }
+}

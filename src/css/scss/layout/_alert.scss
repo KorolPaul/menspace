@@ -1,0 +1,76 @@
+.alert {
+    background: $bg_color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0 0;
+    z-index: 10;
+    font-size: $font-size__small;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: .2s ease-in-out all;
+    @include tablet {
+        font-size: $font-size;
+    }
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &_icon {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% auto;
+        height: 100%;
+        width: 40px;
+        margin: 0 20px 0 0;
+        @include tablet {
+            width: 60px;
+            margin-right: 40px;
+        }
+
+        .alert__error & {
+            background-color: $bright_color;
+            background-image: url(#{$img-path}/icons/cancel.svg);
+        }
+        .alert__info & {
+            background-color: #2a5475;
+            background-image: url(#{$img-path}/icons/information.svg);
+        }
+        .alert__success & {
+            background-color: #346d32;
+            background-image: url(#{$img-path}/icons/success.svg);
+        }
+    }
+    &_text {
+        color: $light_color;
+        padding: 10px 0;
+    }
+    &_close {
+        position: absolute;
+        background: url(#{$img-path}/icons/close.svg) no-repeat center center;
+        background-size: 16px auto;
+        border: none;
+        padding: 0;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin: -10px 0 0;
+        opacity: .5;
+        transition: .2s ease-in-out opacity;
+
+        &:hover {
+            opacity: 1;
+        }
+        &:active {
+            opacity: .7;
+        }
+    }
+}

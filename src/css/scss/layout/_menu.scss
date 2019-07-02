@@ -1,0 +1,85 @@
+.menu {
+    display: none;
+    background: rgba($bg_color, .96);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 127px 10px 0;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        background: transparent;
+        position: static;
+        padding: 0 20px;
+    }
+
+    &.opened {
+        display: block;
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &_link {
+        display: block;
+        margin: 15px 0;
+        position: relative;
+        @include tablet {
+            display: inline;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -3px;
+            right: -3px;
+            margin: 8px 0 0;
+            border-bottom: 3px solid transparent;
+            transition: .2s ease-in-out border-color;
+        }
+
+        &.active {
+            color: $light_color;
+
+            &::after {
+                @include tablet {
+                    border-color: $bright_color;
+                }
+            }
+        }
+        &:hover {
+            @include tablet {
+                color: $light_color;
+
+                &::after {
+                    @include tablet {
+                        border-color: $bright_color;
+                    }
+                }
+            }
+        }
+    }
+    &_link-icon {
+        color: $bright_color;
+        margin: 0 10px 0 0;
+        width: 20px;
+        vertical-align: middle;
+    }
+    &_leave {
+        display: block;
+        position: absolute;
+        right: 10px;
+        bottom: 30px;
+        background: url(#{$img-path}/icons/logout.svg) no-repeat 0 center;
+        padding: 0 0 0 40px;
+        color: #4b535c;
+        border: none;
+        border-radius: 0;
+        @include tablet {
+            display: none;
+        }
+    }
+}

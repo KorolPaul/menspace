@@ -1,0 +1,18 @@
+.footer-menu {
+    margin: 0 0 30px;
+    @include tablet {
+        margin: 0 0 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_link {
+        display: block;
+        text-align: center;
+        margin: 0 0 14px;
+        @include tablet {
+            display: inline;
+            text-align: left;
+        }
+    }
+}

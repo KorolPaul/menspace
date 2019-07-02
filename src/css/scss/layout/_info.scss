@@ -1,0 +1,44 @@
+.info {
+    display: inline-block;
+    position: relative;
+
+    &_icon {
+        cursor: pointer;
+    }
+    &_text {
+        box-shadow: 0 0 10px rgba($gray_color, .7);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: $bg_color;
+        max-width: 300px;
+        padding: 10px;
+        border-radius: 12px;
+        display: none;
+        z-index: 1;
+        @include tablet {
+            right: auto;
+            left: 50%;
+            transform: translate(-50%, 10px);
+        }
+
+        .info:hover & {
+            display: block;
+        }
+
+        &::before {
+            content: '▲';
+            position: absolute;
+            right: 5px;
+            top: -7px;
+            font-size: 12px;
+            color: $bg_color;
+            @include tablet {
+                right: auto;
+                top: -10px;
+                left: 50%;
+                transform: translate(-50%, 0) scaleX(1.5);
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $bg_color url(#{$img_path}/bg-top.png) center 0 no-repeat;
+    color: $color;
+    font: #{$font-size}/18px $font-family;
+    @include tablet {
+        background-size: 100% auto;
+
+    }
+}
+.menu-opened {
+    overflow: hidden;
+}
+
+a {
+    color: $light_color;
+    text-decoration: none;
+    transition: .2s ease-in-out color;
+
+    &:hover,
+    &.hover {
+        color: $bright_color__hover;
+        outline: none;
+    }
+    &:active,
+    &.active {
+        color: $bright_color__active;
+        outline: none;
+    }
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul,
+ol {
+    padding: 0 0 0 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: $light_color;
+    font-weight: normal;
+    padding: 7px 15px;
+    border-bottom: 1px solid $bright_color;
+    text-align: left;
+    font-size: 15px;
+    @include tablet {
+        font-size: $font-size;
+        padding: 8px 30px;
+    }
+
+    &:first-child {
+        padding-left: 0;
+        @include tablet {
+            padding-left: 15px;
+        }
+    }
+    &:last-child {
+        padding-right: 0;
+        @include tablet {
+            padding-right: 15px;
+        }
+    }
+}
+td {
+    padding: 7px 15px;
+    border-bottom: 1px solid $gray_color;
+    font-size: 15px;
+    @include tablet {
+        font-size: $font-size;
+        padding: 8px 30px;
+    }
+
+    tr:last-child & {
+        border: none;
+    }
+    &:first-child {
+        padding-left: 0;
+        @include tablet {
+            padding-left: 15px;
+        }
+    }
+    &:last-child {
+        padding-right: 0;
+        @include tablet {
+            padding-right: 15px;
+        }
+    }
+}
+.table-number {
+    color: $bright_color;
+}
+.amount-and-currency {
+    color: $light_color;
+}
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+    @include tablet {
+        overflow: visible;
+    }
+}

@@ -1,0 +1,66 @@
+.switch-wrapper {
+    text-align: center;
+}
+
+.switch {
+    margin: 0 auto 20px; 
+    overflow: auto;
+    text-align: center;
+    @include media(1170px) {
+        margin-bottom: 38px;
+    }
+    
+
+    &_items {
+        border: 1px solid #2b3036;
+        border-radius: 36px;
+        display: inline-flex;
+    }
+    &_item {
+        color: $color;
+        background: transparent;
+        border-color: transparent;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 20px 10px;
+        height: 40px;
+        line-height: 1;
+        vertical-align: middle;
+        white-space: nowrap;
+        transition: .2s ease-in-out all;
+        @include desktop {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+        &:hover,
+        &__hover {
+            color: $bright_color;
+        }
+        &__active {
+            color: $bright_color;
+            border-color: $bright_color;
+            box-shadow: 0 0 10px 2px rgba($bright_color, .25), 0 0 10px 2px rgba($bright_color, .25) inset;
+        }
+    }
+    &_icon {
+        max-height: 100%;
+        width: 22px;
+        color: $color;
+        fill: $color;
+        margin: 1px 12px 0 0;
+        vertical-align: middle;
+
+        .switch_item:hover &,
+        .switch_item__hover &,
+        .switch_item__active & {
+            color: $bright_color;
+            fill: $bright_color;
+        }
+
+        path {
+            transition: .2s ease-in-out fill;
+        }
+    }
+}

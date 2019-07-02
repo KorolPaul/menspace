@@ -1,0 +1,33 @@
+.games-menu {
+    margin: 0 auto 20px; 
+    text-align: center;
+    @include media(1170px) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 38px;
+    }
+
+    .switch {
+        @include media(1170px) {
+            margin: 0 30px 0 0;
+        }
+    }
+
+    &_button {
+        @include button;
+
+        .button_icon {
+            position: relative;
+
+            &::after {
+                content: '+';
+                position: absolute;
+                top: -12px;
+                right: -8px;
+                font-size: 22px;
+                color: $light_color;
+                text-shadow: 0 0 3px $bright_color;
+            }
+        }
+    }
+}

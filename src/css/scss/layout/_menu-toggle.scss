@@ -1,0 +1,63 @@
+.menu-toggle {
+    $box-shadow: 1px 0 0 0 rgba(#fff, 0.5), 0 1px 0 0 rgba(#fff, 0.5), -1px 0 0 0 rgba(#fff, 0.5), 0 -1px 0 0 rgba(#fff, 0.5);
+
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+    padding: 7px 0;
+    margin: 0;
+    width: 21px;
+    overflow: visible;
+    position: absolute;
+    left: 11px;
+    top: 21px;
+    z-index: 2;
+    position: absolute;
+    @include tablet {
+        display: none;
+    }
+
+    &_line {
+        background: $light_color;
+        box-shadow: $box-shadow;
+        height: 2px;
+        transition: .2s ease background, .2s ease box-shadow;
+
+        .menu-toggle.opened & {
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    &::before {
+        content: '';
+        box-shadow: $box-shadow;
+        background: $light_color;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        transition: .2s ease-in-out height, .2s ease-in-out transform;
+    }
+    &::after {
+        content: '';
+        box-shadow: $box-shadow;
+        background: $light_color;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        transition: .2s ease-in-out height, .2s ease-in-out transform;
+    }
+
+    &.opened {
+        &::before {
+            transform: rotateZ(45deg) translate(3px, 5px);
+        }
+        &::after {
+            transform: rotateZ(-45deg) translate(5px, -7px)
+        }
+    }
+    
+}
