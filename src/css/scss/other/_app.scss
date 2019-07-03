@@ -1,0 +1,15 @@
+.app {
+    text-align: center;
+
+    &_title {
+        font: $font-size__small $font-family__heading;
+        text-transform: uppercase;
+        margin: 0 0 25px;
+    }
+    &_link {
+        margin: 0 15px;
+    }
+    &_icon {
+        width: 105px;
+    }
+}

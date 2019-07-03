@@ -4,7 +4,6 @@ input[type="search"],
 input[type="email"],
 input[type="url"],
 input[type="tel"] {
-    background-color: $dark_color;
     color: #4e565c;
     border: 1px solid #2e343c;
     border-radius: 8px;
@@ -24,7 +23,6 @@ input[type="tel"] {
         color: #7f8a95;
     }
     &:disabled {
-        background-color: rgba($dark_color, .3);
         color: rgba(#4e565c, .3);
         border-color: rgba(#2e343c, .3);
     }
@@ -63,8 +61,6 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
   border: 1px solid #2e343c;
-  background-color: $dark_color !important;
   -webkit-text-fill-color:  #4e565c;
-  -webkit-box-shadow: 0 0 0px 1000px $dark_color inset;
   transition: background-color 5000s ease-in-out 0s;
 }

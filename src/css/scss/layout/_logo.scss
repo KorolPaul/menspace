@@ -1,12 +1,16 @@
 .logo {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
 
-    &_image {
-        display: block;
-        margin: 0 auto 11px;
-        width: 110px;
-        @include tablet {
-            width: 182px;
-            margin-bottom: 13px;
-        }
+    &_icon {
+        margin: 0 25px 0 0;
+        width: 70px;
+        vertical-align: middle;
+    }
+    &_title {
+        width: 196px;
+        vertical-align: middle;
     }
 }

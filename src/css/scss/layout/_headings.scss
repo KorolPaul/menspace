@@ -1,13 +1,11 @@
 %heading-1 {
-    color: $light_color;
-    font: 25px $font-family;
+    font: 41px $font-family__heading;
     margin: 40px 0 20px;
     @include tablet {
-        font: 32px $font-family;
+        font-size: 58px;
     }
 }
 %heading-2 {
-    color: $light_color;
     font: 18px $font-family;
     margin: 40px 0 20px;
     @include tablet {
@@ -15,9 +13,7 @@
     }
 }
 %heading-3 {
-    color: $bright_color;
-    font: 16px $font-family;
-    margin: 0;
+    font: 38px $font-family__heading;
 }
 
 h1,

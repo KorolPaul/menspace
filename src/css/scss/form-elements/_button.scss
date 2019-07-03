@@ -4,7 +4,7 @@
     border-radius: 36px;
     box-sizing: border-box;
     cursor: pointer;
-    color: $light_color;
+    color: $color;
     font-size: 16px;
     padding: 10px 20px;
     text-align: center;
@@ -14,13 +14,9 @@
 
     &:hover,
     &__hover {
-        background-color: $bright_color__hover;
-        border-color: $bright_color__hover;
     }
     &:active,
     &__active {
-        background-color: $bright_color__active;
-        border-color: $bright_color__active;
         color: rgba(#fff, .3);
     }
     &:disabled {
@@ -42,41 +38,5 @@ input[type="submit"] {
     @include tablet {
         width: auto;
         min-width: 220px;
-    }
-    
-    &_icon {
-        margin: 0 10px 0 0;
-    }
-    &__secondary {
-        color: $bright_color;
-        background: transparent;    
-    }
-    &__secondary:hover,
-    &__secondary.button__hover {
-        background: transparent;
-        border-color: $bright_color__hover;
-        color: $bright_color__hover;
-    }
-    &__secondary:active,
-    &__secondary.button__active {
-        background: transparent;
-        color: $bright_color__active;
-        border-color: $bright_color__active;
-    }
-    &__signin,
-    &__register {
-        min-width: 0;
-        width: auto;
-        
-        img {
-            height: 16px;;
-        }
-    }
-    &__register {
-        margin: 0 0 0 15px; 
-    }
-    &__small {
-        width: auto;
-        min-width: 0;
     }
 }

@@ -1,8 +1,7 @@
 textarea {
     @include placeholder-color(rgba(60, 60, 60, .3));
-    background: $dark_color;
     color: $color;
-    border: 1px solid $light_color;
+    border: 1px solid $color;
     font: $font-size $font-family;
     padding: 20px 11px;
     height: 120px;

@@ -1,0 +1,9 @@
+.widget {
+    background: rgba($dark_color, .75);
+    border: 1px solid rgba(#fff, .05);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(60px, -50%);
+    padding: 45px 70px;
+}

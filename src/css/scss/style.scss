@@ -7,7 +7,6 @@
 /* basic */
 @import  "basic/normalize";
 @import  "basic/fonts";
-@import  "basic/font-awesome";
 @import  "basic/default";
 
 /*Form elements*/
@@ -18,14 +17,12 @@
 @import  "form-elements/checkbox";
 @import  "form-elements/label";
 @import  "form-elements/form";
-@import  "form-elements/phone";
-@import  "form-elements/balance";
-@import  "form-elements/bright-button";
 
 
 /*layout*/
 @import  "layout/headings";
 @import  "layout/header";
+@import  "layout/sidebar";
 @import  "layout/footer";
 @import  "layout/footer-menu";
 @import  "layout/menu";
@@ -33,31 +30,21 @@
 @import  "layout/logo";
 @import  "layout/content";
 @import  "layout/popup";
-@import  "layout/fade";
 @import  "layout/title";
 @import  "layout/lang";
-@import  "layout/dashboard";
 @import  "layout/tab";
-@import  "layout/info";
 @import  "layout/slider";
-@import  "layout/loader";
-@import  "layout/page-404";
-@import  "layout/alert";
+@import  "layout/page";
+@import  "layout/pages";
 
 
 /*Other*/
-@import  "other/payment-methods";
-@import  "other/breadcrumbs";
-@import  "other/pages";
-@import  "other/switch";
-@import  "other/card";
-@import  "other/winners";
-@import  "other/jackpots";
-@import  "other/bonuses";
-@import  "other/account";
-@import  "other/user";
-@import  "other/games-menu";
-@import  "other/bonus-widget";
+@import  "other/appointment";
+@import  "other/app";
+@import  "other/map";
+@import  "other/widget";
+@import  "other/contacts";
+@import  "other/social";
 
 
 /*Plugins*/

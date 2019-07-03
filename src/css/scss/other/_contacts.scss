@@ -1,0 +1,24 @@
+.contacts {
+    font-size: $font-size__small;
+    font-weight: 300;
+
+    P {
+        background-size: 16px auto;
+        padding: 0 0 0 30px;
+        margin: 0 0 20px;
+    }
+    &_address {
+        background: url(#{$img-path}/marker.svg) no-repeat 0 center;
+        max-width: 250px;
+    }
+    &_time {
+        background: url(#{$img-path}/time.svg) no-repeat 0 center;
+        max-width: 200px;
+    }
+    &_phone {
+        background: url(#{$img-path}/phone.svg) no-repeat 0 center;
+    }
+    &_email {
+        background: url(#{$img-path}/email.svg) no-repeat 0 center;
+    }
+}

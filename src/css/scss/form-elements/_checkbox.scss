@@ -6,7 +6,7 @@ input[type="checkbox"] {
     & + label {
         cursor: pointer;
         display: inline-block;
-        color: $light_color;
+        color: $color;
         padding: 0 15px 0 25px;
         height: 20px;
         position: relative;
@@ -23,7 +23,6 @@ input[type="checkbox"] {
             border-radius: 3px;
             border: 1px solid transparent;
             box-sizing: border-box;
-            background: $dark_color;
             line-height: 17px;
             text-align: center;
             position: absolute;

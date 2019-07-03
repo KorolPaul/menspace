@@ -17,25 +17,24 @@ gulp.task('sync', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('_assets/css/scss/**/*.scss')
+    return gulp.src('src/css/scss/**/*.scss')
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./_assets/css'))
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('img', () =>
-	gulp.src('_assets/img/*')
+	gulp.src('src/img/*')
 		.pipe(imagemin())
         .pipe(gulp.dest('images'))
 );
 
 
 gulp.task('watch', function () {
-    gulp.watch(['_assets/css/scss/**/*.scss'], gulp.parallel('sass'));
+    gulp.watch(['src/css/scss/**/*.scss'], gulp.parallel('sass'));
 });
 
 

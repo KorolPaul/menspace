@@ -1,32 +1,4 @@
 .header {
     position: relative;
-    z-index: 3;
-    @include tablet {
-        @include layout;
-    }
-    @include desktop {
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-    &_top {
-        padding: 16px 0 0;
-        position: relative;
-        z-index: 2;
-        @include tablet {
-            padding: 16px 0 0;
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    &_option {
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 10px 16px 0;
-        @include tablet {
-            justify-content: space-between;
-            align-items: center;
-            padding: 0;
-        }
-    }
+    z-index: 1;
 }

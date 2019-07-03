@@ -1,0 +1,27 @@
+.appointment {
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    display: flex;
+
+    &_button {
+        border-radius: 50%;
+        background: $bright_color;
+        border: 2px solid #806b43;
+        box-sizing: border-box;
+        font: bold 40px $font-family__predator;
+        line-height: 40px;
+        height: 55px;
+        width: 55px;
+        text-align: center;
+        padding: 0;
+        box-shadow: 0 0 0 6px rgba($bright_color, .25),
+                    0 0 0 13px rgba($bright_color, .15);
+    }
+    &_title {
+        font-family: $font-family__heading;
+        text-align: center;
+        width: 100px;
+        margin: 0 0 0 15px;
+    }
+}

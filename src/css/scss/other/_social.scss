@@ -1,0 +1,41 @@
+.social {
+
+    &_title {
+        font: 22px $font-family__heading;
+        text-transform: uppercase;
+    }
+    &_link {
+        border: 1px solid $color;
+        display: inline-block;
+        font-size: 0;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        margin: 0 12px 0 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% auto;
+        opacity: .8;
+        transition: .2s ease-in-out opacity;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &__fb {
+            background-image: url(#{$img-path}/social/fb.svg);
+            background-size: 40% auto;
+        }
+        &__instagram {
+            background-image: url(#{$img-path}/social/insta.svg);
+        }
+        &__youtube {
+            background-image: url(#{$img-path}/social/youtube.svg);
+            background-size: 60% auto;
+        }
+        &__twitter {
+            background-image: url(#{$img-path}/social/twitter.svg);
+        }
+    }
+}

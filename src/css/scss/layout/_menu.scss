@@ -42,7 +42,7 @@
         }
 
         &.active {
-            color: $light_color;
+            color: $color;
 
             &::after {
                 @include tablet {
@@ -52,7 +52,7 @@
         }
         &:hover {
             @include tablet {
-                color: $light_color;
+                color: $color;
 
                 &::after {
                     @include tablet {
