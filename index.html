@@ -16,45 +16,50 @@
     <meta name="HandheldFriendly" content="true">
 </head>
 <body>
-    <button class="menu-toggle">
+    <button class="menu-toggle js-menu-toggle">
         <div class="menu-toggle_line"></div>
         <div class="menu-toggle_line"></div>
         <div class="menu-toggle_line"></div>
         menu
     </button>
-    <div class="sidebar">
-        <div class="lang">
+    <div class="sidebar opened">
+        <button class="sidebar_close js-menu-toggle">
+            close
+        </button>
+        <div class="sidebar_column">
             <div class="lang">
-                <a href="/en" class="lang_item">en</a>
+                <a href="/en" class="lang_item active">en</a>
                 <a href="/ru" class="lang_item">ru</a>
                 <a href="/pt" class="lang_item">pt</a>
             </div>
+            <nav class="menu">
+                <a href="#main" class="menu_link">HOME</a>
+                <a href="#about" class="menu_link">ABOUT US</a>
+                <a href="#services" class="menu_link">SERVICES</a>
+                <a href="#price-lists" class="menu_link">PRICE LISTS</a>
+                <a href="#appointment" class="menu_link">make an appointment</a>
+                <a href="#appointment" class="menu_link">make an appointment</a>
+                <a href="#gallery" class="menu_link">gallery</a>
+                <a href="#contact" class="menu_link">contact</a>
+            </nav>
         </div>
-        <nav class="menu">
-            <a href="#main" class="menu_link">HOME</a>
-            <a href="#about" class="menu_link">ABOUT US</a>
-            <a href="#services" class="menu_link">SERVICES</a>
-            <a href="#price-lists" class="menu_link">PRICE LISTS</a>
-            <a href="#appointment" class="menu_link">make an appointment</a>
-            <a href="#appointment" class="menu_link">make an appointment</a>
-            <a href="#gallery" class="menu_link">gallery</a>
-            <a href="#contact" class="menu_link">contact</a>
-        </nav>
-        <div class="contacts">
-            <p class="contacts_phone">
-                +351 123456789
-            </p>
-            <p class="contacts_time">
-                Monday to Saturday
-                09:00 to 21:00
-            </p>
-        </div>
-        <div class="social">
-            <p class="social_title">FOLLOW US</p>
-            <a href="#" class="social_link social_link__fb">facebook</a>
-            <a href="#" class="social_link social_link__instagram">instagram</a>
-            <a href="#" class="social_link social_link__youtube">youtube</a>
-            <a href="#" class="social_link social_link__twitter">twitter</a>
+        <div class="sidebar_column">
+            <div class="contacts">
+                <p class="contacts_phone">
+                    +351 123456789
+                </p>
+                <p class="contacts_time">
+                    Monday to Saturday
+                    09:00 to 21:00
+                </p>
+            </div>
+            <div class="social">
+                <p class="social_title">FOLLOW US</p>
+                <a href="#" class="social_link social_link__fb">facebook</a>
+                <a href="#" class="social_link social_link__instagram">instagram</a>
+                <a href="#" class="social_link social_link__youtube">youtube</a>
+                <a href="#" class="social_link social_link__twitter">twitter</a>
+            </div>
         </div>
     </div>
     <header class="header">

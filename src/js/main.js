@@ -1,13 +1,11 @@
 $(document).ready(function () {
     /* Menu toggle */
-    const menuElement = $('.menu');
-    const menuToggleElement = $('.menu-toggle');
+    const $sidebar = $('.sidebar');
+    const $menuToggle = $('.js-menu-toggle');
 
-    $('.menu-toggle, .menu_leave').on('click', function (e) {
+    $menuToggle.on('click', function (e) {
         e.preventDefault();
-        menuToggleElement.toggleClass('opened');
-        menuElement.toggleClass('opened');
-        $('html').toggleClass('menu-opened');
+        $sidebar.toggleClass('opened');
     });
 
     /* Slider */

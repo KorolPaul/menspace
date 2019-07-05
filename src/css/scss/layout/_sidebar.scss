@@ -1,7 +1,43 @@
 .sidebar {
+    background: rgba($dark_color, .96);
     position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-width: 600px;
     top: 0;
     left: 0;
     bottom: 0;
+    padding: 40px 130px;
     transform: translate(-100%, 0);
+    transition: .4s ease-in-out transform;
+    z-index: 10;
+
+    &::before {
+        content: 'MENU';
+        color: rgba($gray_color, .03);
+        font-size: 164px;
+        line-height: 1;
+        font-weight: 900;
+        position: absolute;
+        top: -30px;
+        right: -10px;
+    }
+
+    &.opened {
+        transform: translate(0, 0);
+    }
+
+    &_close {
+        background: url(#{$img-path}/close.svg) no-repeat center center;
+        background-size: 25px auto;
+        border: none;
+        border-radius: 0;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        padding: 50px 0 0;
+        font: 300 13px $font-family__heading;
+        text-transform: uppercase;
+    }
 }

@@ -1,22 +1,18 @@
 .lang {
-    position: absolute;
-    top: 14px;
-    right: 10px;
-    @include tablet {
-        min-width: 100px;
-        position: static;
-        margin: 0 0 0 30px;
-        top: 20px;
-    }
-}
+    background: url(#{$img-path}/planet.svg) no-repeat 0 center;
+    background-size: 15px auto; 
+    padding: 0 0 0 45px;
 
-.flag-icon {
-    height: 16px;
-    width: 24px;
-    display: inline-block;
-    margin: -1px 4px 0 0;
-    vertical-align: top;
-    @include tablet {
-        margin-right: 8px;
+    &_item {
+        font: 300 #{22px}/72px $font-family__heading;
+        text-transform: uppercase;
+        margin: 0 30px 0 0;
+        vertical-align: middle;
+
+        &.active {
+            font-size: 24px;
+            font-weight: bold;
+            color: $bright_color;
+        }
     }
 }

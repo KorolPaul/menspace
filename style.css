@@ -419,7 +419,7 @@ input[type="submit"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -448,7 +448,7 @@ input[type="submit"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -768,13 +768,13 @@ label {
   bottom: 8px;
   left: 10px;
   margin: 0;
-  transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
+  transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
 }
 
 .invalid .form_error-message {
   opacity: 1;
   visibility: visible;
-  transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
+  transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
 }
 
 .error {
@@ -845,11 +845,47 @@ h3,
 }
 
 .sidebar {
+  background: rgba(32, 32, 32, 0.96);
   position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-width: 600px;
   top: 0;
   left: 0;
   bottom: 0;
+  padding: 40px 130px;
   transform: translate(-100%, 0);
+  transition: .4s ease-in-out transform;
+  z-index: 10;
+}
+
+.sidebar::before {
+  content: 'MENU';
+  color: rgba(219, 219, 219, 0.03);
+  font-size: 164px;
+  line-height: 1;
+  font-weight: 900;
+  position: absolute;
+  top: -30px;
+  right: -10px;
+}
+
+.sidebar.opened {
+  transform: translate(0, 0);
+}
+
+.sidebar_close {
+  background: url(src/img/close.svg) no-repeat center center;
+  background-size: 25px auto;
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  padding: 50px 0 0;
+  font: 300 13px "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 .footer {
@@ -899,104 +935,33 @@ h3,
 }
 
 .menu {
-  display: none;
-  background: rgba(36, 36, 36, 0.96);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 127px 10px 0;
-}
-
-@media all and (min-width: 767px) {
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    background: transparent;
-    position: static;
-    padding: 0 20px;
-  }
-}
-
-.menu.opened {
-  display: block;
-}
-
-@media all and (min-width: 767px) {
-  .menu.opened {
-    display: flex;
-  }
+  margin: 0 50px 0 0;
+  width: 220px;
 }
 
 .menu_link {
   display: block;
-  margin: 15px 0;
+  font: 300 19px "Oswald", sans-serif;
+  padding: 24px 0;
   position: relative;
-}
-
-@media all and (min-width: 767px) {
-  .menu_link {
-    display: inline;
-  }
+  text-transform: uppercase;
 }
 
 .menu_link::after {
   content: '';
+  border-bottom: 2px solid #8f7b54;
   position: absolute;
-  top: 100%;
-  left: -3px;
-  right: -3px;
-  margin: 8px 0 0;
-  border-bottom: 3px solid transparent;
-  transition: .2s ease-in-out border-color;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 15px 0 0;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: .2s ease-in-out transform;
 }
 
-.menu_link.active {
-  color: #fff;
-}
-
-@media all and (min-width: 767px) {
-  .menu_link.active::after {
-    border-color: #8f7b54;
-  }
-}
-
-@media all and (min-width: 767px) {
-  .menu_link:hover {
-    color: #fff;
-  }
-}
-
-@media all and (min-width: 767px) and (min-width: 767px) {
-  .menu_link:hover::after {
-    border-color: #8f7b54;
-  }
-}
-
-.menu_link-icon {
-  color: #8f7b54;
-  margin: 0 10px 0 0;
-  width: 20px;
-  vertical-align: middle;
-}
-
-.menu_leave {
-  display: block;
-  position: absolute;
-  right: 10px;
-  bottom: 30px;
-  background: url(src/img/icons/logout.svg) no-repeat 0 center;
-  padding: 0 0 0 40px;
-  color: #4b535c;
-  border: none;
-  border-radius: 0;
-}
-
-@media all and (min-width: 767px) {
-  .menu_leave {
-    display: none;
-  }
+.menu_link:hover::after, .menu_link.active::after {
+  transform: scaleX(1);
 }
 
 .menu-toggle {
@@ -1110,32 +1075,22 @@ h3,
 }
 
 .lang {
-  position: absolute;
-  top: 14px;
-  right: 10px;
+  background: url(src/img/planet.svg) no-repeat 0 center;
+  background-size: 15px auto;
+  padding: 0 0 0 45px;
 }
 
-@media all and (min-width: 767px) {
-  .lang {
-    min-width: 100px;
-    position: static;
-    margin: 0 0 0 30px;
-    top: 20px;
-  }
+.lang_item {
+  font: 300 22px/72px "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin: 0 30px 0 0;
+  vertical-align: middle;
 }
 
-.flag-icon {
-  height: 16px;
-  width: 24px;
-  display: inline-block;
-  margin: -1px 4px 0 0;
-  vertical-align: top;
-}
-
-@media all and (min-width: 767px) {
-  .flag-icon {
-    margin-right: 8px;
-  }
+.lang_item.active {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8f7b54;
 }
 
 .tab {
