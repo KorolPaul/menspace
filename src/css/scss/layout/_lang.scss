@@ -1,5 +1,5 @@
 .lang {
-    background: url(#{$img-path}/planet.svg) no-repeat 0 center;
+    background: url(#{$img}/planet.svg) no-repeat 0 center;
     background-size: 15px auto; 
     padding: 0 0 0 45px;
 
@@ -8,6 +8,11 @@
         text-transform: uppercase;
         margin: 0 30px 0 0;
         vertical-align: middle;
+        transition: .2s ease-in-out color;
+
+        &:hover {
+            color: $bright_color;
+        }
 
         &.active {
             font-size: 24px;

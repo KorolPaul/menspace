@@ -36,6 +36,7 @@
 @import  "layout/slider";
 @import  "layout/page";
 @import  "layout/pages";
+@import  "layout/showcase";
 
 
 /*Other*/
@@ -45,8 +46,13 @@
 @import  "other/widget";
 @import  "other/contacts";
 @import  "other/social";
+@import  "other/about";
+@import  "other/service";
+@import  "other/prices";
+@import  "other/gallery";
 
 
 /*Plugins*/
 @import  "plugins/slick";
+@import  "plugins/owl";
 @import  "plugins/choices";

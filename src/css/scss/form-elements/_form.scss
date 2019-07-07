@@ -1,83 +1,9 @@
 .form {
     &_row {
-        @include desktop {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    &_row-item {
-        padding: 0 0 30px;
-        flex-grow: 10;
-        position: relative;
-        @include desktop {
-        }
+        margin: 0 0 20px;
 
-        &__center {
-            text-align: center;
+        &__right {
+            text-align: right;
         }
-        & + & {
-            @include desktop {
-                margin-left: 30px;
-            }
-        }
-    }
-    &_Links {
-        color:$input_color;
-    }
-    &_link {
-        color:$input_color;
-        font-size: 14px;
-        margin: 0 5px;
-        text-transform: uppercase;
-    }
-    &_submit {
-        width: 100%;
-        margin: 5px 0 20px;
-    }
-    &_clarification {
-        margin: 25px 0 0;
-    }
-    &_error-message {
-        color: $bright_color;
-        font-size: 13px;
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        bottom: 8px;
-        left: 10px;
-        margin: 0;
-        transition: .2s ease-in-out opacity .1s,
-                     .0001s ease-in-out visibility .2s;
-
-        .invalid & {
-            opacity: 1;
-            visibility: visible;
-            transition: .2s ease-in-out opacity .2s,
-                         .0001s ease-in-out visibility;
-        }
-    }
-}
-
-.error {
-    color: $bright_color;
-}
-
-.form-wrapper {
-    padding: 20px 10px 0;
-    margin: 50px auto 100px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1pxx solid #30363c;
-    @include tablet {
-        width: auto;
-        padding: 20px 20px 0;
-        min-width: 400px;
-    }
-    @include desktop {
-        box-sizing: border-box;
-        padding-left: 75px;
-        padding-right: 75px;
-        max-width: 600px;
     }
 }

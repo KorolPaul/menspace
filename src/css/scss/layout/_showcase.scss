@@ -1,0 +1,35 @@
+.showcase {
+    position: relative;
+    height: 100%;
+    
+    &_video {
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 65vw;
+        transform: translate(-50%, -50%);
+    }
+    &_bg {
+        background: $dark_color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(#{$img}/showcase-bg.png) center center no-repeat;
+        background-size: 100% 100%;
+        //mask-image: url(#{$img}/showcase-filter.png);
+    }
+    &_logo {
+        background:  url(#{$img}/showcase-filter.png) center center no-repeat;
+        background-size: auto 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 65vw;
+        height: 105vh;
+        transform-origin: center center;
+        transform: translate(-50%, -50%);
+    }
+}

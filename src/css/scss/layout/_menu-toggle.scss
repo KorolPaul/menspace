@@ -2,13 +2,21 @@
     cursor: pointer;
     border: none;
     background: transparent;
-    font: 300 13px $font-family__heading;
+    font-size: 0px;
+    color: transparent;
     text-transform: uppercase;
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translate(0, -50%);
+    position: fixed;
+    right: 40px;
+    top: 40px;
     z-index: 1;
+    @include desktop {
+        left: 50px;
+        top: 50%;
+        right: auto;
+        font: 300 13px $font-family__heading;
+        color: $color;
+        transform: translate(0, -50%);
+    }
 
     &_line {
         background: $bright_color;

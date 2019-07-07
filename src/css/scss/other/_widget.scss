@@ -1,9 +1,51 @@
 .widget {
     background: rgba($dark_color, .75);
-    border: 1px solid rgba(#fff, .05);
+    border: 2px solid rgba($bright_color, .05);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(60px, -50%);
     padding: 45px 70px;
+    z-index: 3;
+
+    &_navigation {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform-origin: 0 0;
+        transform: rotate(90deg) translate(0, -100%);
+        white-space: nowrap;
+    }
+    &_navigation-button {
+        background: #333333;
+        box-shadow: 5px -6px 8px 1px rgba(0, 0, 0, 0.24);
+        border: none;
+        border-radius: 5px 60px 0 0 / 0 169% 0 0;
+        color: #5f5f5f;
+        font-family: $font-family__heading;
+        text-transform: uppercase;
+        padding: 10px 30px 10px 15px;
+        z-index: 1;
+        position: relative;
+        transition: .2s ease-in-out background, .2s ease-in-out color;
+
+        &.active, 
+        &:hover {
+            color: $bright_color;
+            background: #222222;
+            z-index: 2;
+        }
+
+        & + & {
+            margin: 0 0 0 -20px;
+        }
+    }
+    &_tab {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
 }

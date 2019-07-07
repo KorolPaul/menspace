@@ -34,7 +34,7 @@ input[type="checkbox"] {
         }
         &::after {
             content: '';
-            background:  url(#{$img-path}/icons/check.svg) no-repeat center center;
+            background:  url(#{$img}/icons/check.svg) no-repeat center center;
             background-size: 100% auto;
             position: absolute;
             top: 6px;

@@ -1,0 +1,32 @@
+.prices {
+    text-align: left;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.price {
+    @include tablet {
+        width: 45%;
+    }
+
+    &_header {
+        display: flex;
+        justify-content: stretch;
+        margin: 0 0 5px;
+    }
+    &_title {
+        color: $bright_color;
+        @extend %heading-3;
+    }
+    &_space {
+        border-bottom: 1px dotted $color;
+        flex-grow: 10;
+        margin: -1px 0 0;
+    }
+    &_value {
+        @extend %heading-3;
+    }
+}

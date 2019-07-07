@@ -4,54 +4,21 @@ input[type="search"],
 input[type="email"],
 input[type="url"],
 input[type="tel"] {
-    color: #4e565c;
-    border: 1px solid #2e343c;
-    border-radius: 8px;
+    @include placeholder-color(#bcbcbc);
+    color: #bcbcbc;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba($color, .12);
     box-sizing: border-box;
-    font: $font-size $font-family;
-    padding: 7px 25px 7px;
+    font: 300 15px $font-family;
+    padding: 7px 5px;
     width: 100%;
-    transition: .2s ease-in border-color, .2s ease-in background;
-    @include tablet {
-        //width: inherit;
-    }
+    transition: .2s ease-in border-color, .2s ease-in color;
 
     &:focus,
     &.focus {
-        border-color: #3c4552;
-        background-color: $gray_color;
-        color: #7f8a95;
+        color: $color;
     }
-    &:disabled {
-        color: rgba(#4e565c, .3);
-        border-color: rgba(#2e343c, .3);
-    }
-
-    .invalid & {
-        border-color: $bright_color;
-    }
-}
-
-input[type="password"] {
-    padding-left: 40px;
-    background-repeat: no-repeat;
-    background-position: 12px center;
-    background-image: url(#{$img-path}/icons/lock.svg);
-    background-size: 16px auto;
-}
-input[type="email"] {
-    padding-left: 40px;
-    background-repeat: no-repeat;
-    background-position: 12px center;
-    background-image: url(#{$img-path}/icons/envelope.svg);
-    background-size: 16px auto;
-}
-input[type="search"] {
-    padding-right: 40px;
-    background-repeat: no-repeat;
-    background-position: 95% center;
-    background-image: url(#{$img-path}/icons/search.svg);
-    background-size: 16px auto;
 }
 
 input:-webkit-autofill,
@@ -60,7 +27,8 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  border: 1px solid #2e343c;
-  -webkit-text-fill-color:  #4e565c;
-  transition: background-color 5000s ease-in-out 0s;
+    border: none;
+    border-bottom: 1px solid rgba($color, .12);
+    -webkit-text-fill-color:  #4e565c;
+    transition: background-color 5000s ease-in-out 0s;
 }

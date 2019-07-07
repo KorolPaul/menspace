@@ -1,0 +1,130 @@
+.gallery {
+    text-align: center;
+    min-width: 0;
+    @include tablet {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+
+    &_title {
+        @include tablet {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+    &_slider {
+        @include tablet {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+    }
+    &_info {
+        text-align: left;
+        margin: 0 0 24px;
+        @include tablet {
+            grid-column: 1 / 2;
+            grid-row: 1 / 5;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+    }
+    &_info-image-wrapper {
+        position: relative;
+    }
+    &_info-meta {
+        position: absolute;
+        left: 30px;
+        bottom: 5px;
+    }
+    &_info-title {
+        font: italic 300 #{$font-size__small}/1.2 $font-family__heading;
+        text-transform: uppercase;
+        margin: 0 0 5px;
+        position: relative;
+
+        &::after {
+            content: '';
+            background: $bright_color;
+            height: 2px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            right: 105%;
+        }
+        strong {
+            display: block;
+        }
+    }
+    &_info-date {
+        background: url(#{$img}/calendar.svg) no-repeat 0 center;
+        background-size: 13px auto;
+        padding: 5px 0 5px 20px;
+        font: 500 10px $font-family;
+        margin: 0;
+        color: $bright_color;
+    }
+    &_info-text {
+        background: #1c1c1c;
+        padding: 20px 30px 0;
+        overflow: hidden;
+
+        p {
+            margin: 0 0 20px;
+            font-size: 13px;
+        }
+    }
+    &_controls {
+        background: #1c1c1c;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 30px;
+    }   
+    &_navigation {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &_progress {
+        width: 145px;
+        height: 3px;
+        background: #404040;
+    }
+    &_progress-value {
+        height: 100%;
+        background: $bright_color;
+    }
+    &_count {
+        height: 26px;
+        width: 35px;
+        margin: 0 0 0 30px;
+        position: relative;
+
+        &::after {
+            content: '';
+            background: #404040;
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            left: 55%;
+            top: 0;
+            transform: rotate(25deg);
+        }
+    }
+    &_count-value {
+        color: $bright_color;
+        font: italic 600 12px $font-family__heading;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &_count-total {
+        font: italic 12px $font-family__heading;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

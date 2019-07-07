@@ -84,127 +84,35 @@
 /* Arrows */
 .slick-prev,
 .slick-next {
-    font-size: 0;
-    line-height: 0;
-    position: absolute;
-    top: 50%;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    border-radius: 0;
+    font: italic 12px $font-family__heading;
+    text-transform: uppercase;
+    padding: 12px 20px;
     cursor: pointer;
-    color: transparent;
     border: none;
     outline: none;
     background: transparent;
 }
+
+.slick-prev {
+    background: url(#{$img}/prev.svg) no-repeat 0 center;
+    background-size: 7px auto;
+}
+.slick-next {
+    background: url(#{$img}/next.svg) no-repeat right center;
+    background-size: 7px auto;
+    border-left: 1px solid #333333;
+}
+
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-    color: transparent;
+    color: $bright_color;
     outline: none;
-    background: transparent;
-}
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-    opacity: 1;
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
     opacity: 0.25;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    font-size: 20px;
-    line-height: 1;
-    opacity: 0.75;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-    left: -25px;
-}
-.slick-prev:before {
-    content: "←";
-}
-
-.slick-next {
-    right: -25px;
-}
-.slick-next:before {
-    content: "→";
-}
-
-/* Dots */
-.slick-dotted.slick-slider {
-    margin-bottom: 30px;
-}
-
-.slick-dots {
-    position: absolute;
-    z-index: 2;
-    bottom: 2em;
-    left: 50%;
-    display: inline-flex;
-    list-style: none;
-    transform: translateX(-50%);
-    background: $gray_color;
-    padding: 3px;
-    border-radius: 12px;
-    margin: 0;
-    @include desktop {
-        bottom: 1em;
-    }
-
-    li {
-        position: relative;
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 0 2px;
-        padding: 0;
-        cursor: pointer;
-        line-height: 0px;
-        @include desktop {
-            width: 15px;
-            height: 15px;
-            margin: 0 4px;
-        }
-
-        &:first-child {
-            margin-left: 0;
-        }
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-    li button {
-        font-size: 0;
-        line-height: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        border: none;
-        border-radius: 50%;
-        transition: all 300ms ease-in-out;
-        cursor: pointer;
-        line-height: 0;
-        vertical-align: 4px;
-        @include desktop {
-            vertical-align: inherit;
-        }
-        
-    }
-    li.slick-active button {
-        background: $bright_color;
-    }
-}

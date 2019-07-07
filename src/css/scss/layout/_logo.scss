@@ -1,16 +1,26 @@
 .logo {
-    position: absolute;
+    position: fixed;
     top: 40px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 40px;
+    @include desktop {
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 
     &_icon {
         margin: 0 25px 0 0;
-        width: 70px;
+        width: 50px;
         vertical-align: middle;
+        @include desktop {
+            width: 70px;
+        }
     }
     &_title {
-        width: 196px;
+        width: 150px;
         vertical-align: middle;
+        @include desktop {
+            width: 196px;
+        }
     }
 }

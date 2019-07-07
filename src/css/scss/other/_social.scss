@@ -24,18 +24,18 @@
         }
 
         &__fb {
-            background-image: url(#{$img-path}/social/fb.svg);
+            background-image: url(#{$img}/social/fb.svg);
             background-size: 40% auto;
         }
         &__instagram {
-            background-image: url(#{$img-path}/social/insta.svg);
+            background-image: url(#{$img}/social/insta.svg);
         }
         &__youtube {
-            background-image: url(#{$img-path}/social/youtube.svg);
+            background-image: url(#{$img}/social/youtube.svg);
             background-size: 60% auto;
         }
         &__twitter {
-            background-image: url(#{$img-path}/social/twitter.svg);
+            background-image: url(#{$img}/social/twitter.svg);
         }
     }
 }

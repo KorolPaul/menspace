@@ -1,8 +1,12 @@
 .appointment {
-    position: absolute;
-    top: 40px;
-    right: 45px;
-    display: flex;
+    display: none;
+    @include desktop {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 45px;
+        display: flex;
+    }
 
     &_button {
         border-radius: 50%;

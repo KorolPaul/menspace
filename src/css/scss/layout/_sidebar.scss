@@ -2,7 +2,7 @@
     background: rgba($dark_color, .96);
     position: absolute;
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
     justify-content: space-between;
     min-width: 600px;
     top: 0;
@@ -29,15 +29,47 @@
     }
 
     &_close {
-        background: url(#{$img-path}/close.svg) no-repeat center center;
-        background-size: 25px auto;
+        background: transparent;
         border: none;
         border-radius: 0;
         position: absolute;
         top: 50px;
         right: 50px;
-        padding: 50px 0 0;
+        padding: 35px 0 0;
         font: 300 13px $font-family__heading;
         text-transform: uppercase;
+        transition: .2s ease-in-out color;
+
+        &::before,
+        &::after  {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: 10px;
+            height: 3px;
+            width: 35px;
+            background: $bright_color;
+            transform: rotate(45deg);
+            transition: .2s ease-in-out transform;
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            color: $bright_color;
+
+            &::before {
+                transform: rotate(45deg) scaleX(.8);
+            }
+            &::after {
+                transform: rotate(-45deg) scaleX(.8);
+            }
+        }
+    }
+    &_column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
