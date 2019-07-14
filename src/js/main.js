@@ -18,18 +18,6 @@ $(document).ready(function () {
         $(this).css('transform', `translate(-50%, -50%) rotateY(${percentX / 3}deg) rotateX(${-percentY / 20}deg)`);
     });
 
-    /* Slider */
-    //$('.slider').slick({
-    //    infinite: false,
-    //    slidesToShow: 3,
-    //    slidesToScroll: 1,
-    //    dots: false,
-    //    arrows: true,
-    //    appendArrows: $('.gallery_buttons'),
-    //    prevArrow: '<button type="button" class="slick-prev">prev</buttonn>',
-    //    nextArrow: '<button type="button" class="slick-next">next</button>'
-    //});
-
     /* Gallery */
     var $sliderItems = $('.slider_item');
     var $galleryInfo = $('.gallery_info-content');
@@ -76,6 +64,53 @@ $(document).ready(function () {
             $tabs.removeClass('active');
             $(`.widget_tab[data-tab="${tabNumber}"]`).addClass('active');
         }
+    });
+
+    /* Scroll */
+    var timeout = 500;
+    var isAninimating = false;
+    var activePage = 0;
+    var $pages = $('.page');
+    var $navigation = $('.pages_link');
+
+    function scrollPages(e) {
+        if (isAninimating) { return }
+        isAninimating = true;
+        setTimeout(() => {
+            isAninimating = false;
+        }, timeout);
+
+        var page = $pages.eq(activePage);
+        if (e) {
+            var isScrollDown = e.deltaY >= 0;
+            if (isScrollDown) {
+                if (activePage === 0 && !page.hasClass('scaled')) {
+                    page.addClass('scaled')
+                } else if (activePage < $pages.length - 1) {
+                    activePage++;
+                }
+            } else {
+                if (activePage === 0) {
+                    page.removeClass('scaled')
+                } else {
+                    activePage--
+                }
+            }
+        }
+        
+        $pages.removeClass('active');
+        $navigation.removeClass('active');
+        $pages.eq(activePage).addClass('active');
+        $navigation.eq(activePage).addClass('active');
+    }
+
+    document.addEventListener('wheel', scrollPages);
+
+    $navigation.on('click', function(e) {
+        e.preventDefault();
+        var index = $(this).index();
+        activePage = index;
+        scrollPages(false);
     });
 
 });

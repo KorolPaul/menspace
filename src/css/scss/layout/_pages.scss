@@ -1,27 +1,37 @@
 .pages {
     display: none;
     @include desktop {
-        position: absolute;
+        position: fixed;
         right: 50px;
         top: 50%;
         transform: translate(0, -50%);
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        z-index: 1;
+        z-index: 2;
     }
 
     &_link {
         @include invisible-text;
         display: block;
-        background: $bright-color;
-        height: 3px;
         width: 15px;
-        margin: 9px 0;
+        padding: 9px 0;
 
-        &.active {
+        &::after {
+            content: '';
+            background: $bright-color;
+            display: block;
+            height: 3px;
+            width: 100%;
+            transform-origin: 100% 0;
+            transition: .3s ease-in-out all;
+        }
+        &:hover::after {
+            transform: scaleX(2);
+        }
+        &.active::after {
             background: $gray_color;
-            width: 30px;
+            transform: scaleX(2);
         }
     }
 }

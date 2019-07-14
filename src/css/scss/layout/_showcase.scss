@@ -2,6 +2,21 @@
     position: relative;
     height: 100%;
     z-index: 2;
+    @include tablet {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
+    }
+
+    .scaled & {
+        @include tablet {
+            transform: scale(30);
+            opacity: 0;
+        }
+    }
     
     &_video {
         object-fit: cover;

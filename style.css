@@ -351,6 +351,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media all and (min-width: 767px) {
+  html {
+    overflow: hidden;
+  }
+}
+
 body {
   background: #242424;
   color: #fff;
@@ -360,6 +366,7 @@ body {
 @media all and (min-width: 767px) {
   body {
     background-size: 100% auto;
+    height: 100vh;
   }
 }
 
@@ -1175,6 +1182,29 @@ h3,
   box-sizing: border-box;
 }
 
+@media all and (min-width: 767px) {
+  .page {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    transform: translateY(-100%);
+    transition: .5s ease-in-out transform, .5s ease-in-out filter;
+  }
+}
+
+.page.active {
+  transform: translateY(0);
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+
+.page.active ~ .page {
+  transform: translateY(100%);
+}
+
 .page__main {
   padding: 0;
 }
@@ -1261,14 +1291,14 @@ h3,
 
 @media all and (min-width: 1000px) {
   .pages {
-    position: absolute;
+    position: fixed;
     right: 50px;
     top: 50%;
     transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -1277,21 +1307,51 @@ h3,
   text-shadow: none;
   color: transparent;
   display: block;
-  background: #8f7b54;
-  height: 3px;
   width: 15px;
-  margin: 9px 0;
+  padding: 9px 0;
 }
 
-.pages_link.active {
+.pages_link::after {
+  content: '';
+  background: #8f7b54;
+  display: block;
+  height: 3px;
+  width: 100%;
+  transform-origin: 100% 0;
+  transition: .3s ease-in-out all;
+}
+
+.pages_link:hover::after {
+  transform: scaleX(2);
+}
+
+.pages_link.active::after {
   background: #dbdbdb;
-  width: 30px;
+  transform: scaleX(2);
 }
 
 .showcase {
   position: relative;
   height: 100%;
   z-index: 2;
+}
+
+@media all and (min-width: 767px) {
+  .showcase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
+  }
+}
+
+@media all and (min-width: 767px) {
+  .scaled .showcase {
+    transform: scale(30);
+    opacity: 0;
+  }
 }
 
 .showcase_video {

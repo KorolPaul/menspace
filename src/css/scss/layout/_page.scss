@@ -3,6 +3,22 @@
     position: relative;
     padding: 0 40px;
     box-sizing: border-box;
+    @include tablet {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        filter: blur(15px);
+        transform: translateY(-100%);
+        transition: .5s ease-in-out transform, .5s ease-in-out filter;
+    }
+    &.active {
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+    &.active ~ & {
+        transform: translateY(100%);
+    }
 
     &__main {
         padding: 0;

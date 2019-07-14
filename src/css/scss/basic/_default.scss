@@ -1,5 +1,8 @@
 html {
     scroll-behavior: smooth;
+    @include tablet {
+        overflow: hidden;
+    }
 }
 
 body {
@@ -8,7 +11,7 @@ body {
     font: 200 #{$font-size} $font-family;
     @include tablet {
         background-size: 100% auto;
-
+        height: 100vh;
     }
 }
 
