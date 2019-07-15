@@ -12,6 +12,8 @@
     <link rel="icon" type="image/png" href="16x16px.png" sizes="16x16">
     <link rel="icon" type="image/png" href="32x32px.png" sizes="32x32">
     <link rel="icon" type="image/png" href="48x48px.png" sizes="48x48">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
     <meta content="telephone=no" name="format-detection">
     <meta name="HandheldFriendly" content="true">
 </head>
@@ -397,9 +399,93 @@
             </div>
         </div>
         <div class="page page__contacts">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.815837773483!2d-9.43043408493509!3d38.69907436621532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec4249dd7e111%3A0x681f3c098b5dc433!2zUi4gSm9hcXVpbSBFcmVpcmEgMzksIDI3NTAtNTEyIENhc2NhaXMsINCf0L7RgNGC0YPQs9Cw0LvQuNGP!5e0!3m2!1sru!2sby!4v1562179958870!5m2!1sru!2sby" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="map" id="map">
+                
             </div>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoiY3Nza2luZyIsImEiOiJjank0anpnaXowMDNiM2JwNnpnYXhlcGZ1In0.JqaN0QdsUpWPbwvS7vdN9A';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/dark-v10',
+                    center: [ -9.427356, 38.699200],
+                    zoom: 18
+                });
+
+
+                var size = 200;
+ 
+                var pulsingDot = {
+                    width: size,
+                    height: size,
+                    data: new Uint8Array(size * size * 4),
+                    
+                    onAdd: function() {
+                        var canvas = document.createElement('canvas');
+                        canvas.width = this.width;
+                        canvas.height = this.height;
+                        this.context = canvas.getContext('2d');
+                    },
+                
+                    render: function() {
+                        var duration = 1000;
+                        var t = (performance.now() % duration) / duration;
+                        
+                        var radius = size / 2 * 0.3;
+                        var outerRadius = size / 2 * 0.7 * t + radius;
+                        var context = this.context;
+                        
+                        // draw outer circle
+                        context.clearRect(0, 0, this.width, this.height);
+                        context.beginPath();
+                        context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+                        context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
+                        context.fill();
+                        
+                        // draw inner circle
+                        context.beginPath();
+                        context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+                        context.fillStyle = 'rgba(255, 100, 100, 1)';
+                        context.strokeStyle = 'white';
+                        context.lineWidth = 2 + 4 * (1 - t);
+                        context.fill();
+                        context.stroke();
+                        
+                        // update this image's data with data from the canvas
+                        this.data = context.getImageData(0, 0, this.width, this.height).data;
+                        
+                        // keep the map repainting
+                        map.triggerRepaint();
+                        
+                        return true;
+                    }
+                };
+                
+                map.on('load', function () {
+                
+                map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+                
+                map.addLayer({
+                    "id": "points",
+                    "type": "symbol",
+                    "source": {
+                    "type": "geojson",
+                    "data": {
+                    "type": "FeatureCollection",
+                    "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                    "type": "Point",
+                    "coordinates": [ -9.428256, 38.699200]
+                    }
+                    }]
+                    }
+                    },
+                    "layout": {
+                    "icon-image": "pulsing-dot"
+                    }
+                    });
+                });
+            </script>
             <div class="widget">
                 <div class="widget_navigation">
                     <button class="widget_navigation-button active" data-tab="1">contact info</button>

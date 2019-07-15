@@ -424,7 +424,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +450,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -1464,17 +1464,9 @@ h3,
 .map {
   height: 100vh;
   width: 100%;
-  -webkit-filter: invert(1) grayscale(1);
-  filter: invert(1) grayscale(1);
   overflow: hidden;
   -webkit-mask-image: radial-gradient(circle at 40% 50%, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.2) 50%);
   mask-image: radial-gradient(circle at 40% 50%, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.2) 50%);
-}
-
-.map iframe {
-  width: 150%;
-  height: 100%;
-  transform: translate(-25%, 0);
 }
 
 .widget {

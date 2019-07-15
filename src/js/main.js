@@ -113,4 +113,29 @@ $(document).ready(function () {
         scrollPages(false);
     });
 
+    /* Navigation */
+    function navigateToPage() {
+        switch (document.location.hash) {
+            case '#about':
+                activePage = 1;
+                break;
+            case '#services':
+                activePage = 2;
+                break;
+            case '#price-lists':
+                activePage = 3;
+                break;
+            case '#gallery':
+                activePage = 4;
+                break;
+            case '#contact':
+                activePage = 5;
+                break;
+            default:
+                activePage = 0;
+        }
+        scrollPages();
+    }
+    window.addEventListener('popstate', navigateToPage);
+    navigateToPage();
 });
