@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 318 69.1" style="enable-background:new 0 0 318 69.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Filter_0);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#222222;}
+</style>
+<filter  filterUnits="userSpaceOnUse" height="90px" id="Filter_0" width="318px" x="0px" y="0px">
+	<feOffset  dx="0" dy="6" in="SourceAlpha"></feOffset>
+	<feGaussianBlur  result="blurOut" stdDeviation="3"></feGaussianBlur>
+	<feFlood  flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+	<feComposite  in="floodOut" in2="blurOut" operator="atop"></feComposite>
+	<feComponentTransfer>
+		<feFuncA  slope="0.24" type="linear"></feFuncA>
+	</feComponentTransfer>
+	<feMerge>
+		<feMergeNode></feMergeNode>
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<g class="st0">
+	<path class="st1" d="M302,76H5V23C5,23,4.9,7,21,7h222c0,0,23,0.1,34,22L302,76z"/>
+</g>
+</svg>

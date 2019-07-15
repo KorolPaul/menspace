@@ -40,7 +40,6 @@
                 <a href="#services" class="menu_link">SERVICES</a>
                 <a href="#price-lists" class="menu_link">PRICE LISTS</a>
                 <a href="#appointment" class="menu_link">make an appointment</a>
-                <a href="#appointment" class="menu_link">make an appointment</a>
                 <a href="#gallery" class="menu_link">gallery</a>
                 <a href="#contact" class="menu_link">contact</a>
             </nav>
@@ -399,101 +398,14 @@
             </div>
         </div>
         <div class="page page__contacts">
-            <div class="map" id="map">
-                
-            </div>
-            <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoiY3Nza2luZyIsImEiOiJjank0anpnaXowMDNiM2JwNnpnYXhlcGZ1In0.JqaN0QdsUpWPbwvS7vdN9A';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/dark-v10',
-                    center: [ -9.427356, 38.699200],
-                    zoom: 18
-                });
-
-
-                var size = 200;
- 
-                var pulsingDot = {
-                    width: size,
-                    height: size,
-                    data: new Uint8Array(size * size * 4),
-                    
-                    onAdd: function() {
-                        var canvas = document.createElement('canvas');
-                        canvas.width = this.width;
-                        canvas.height = this.height;
-                        this.context = canvas.getContext('2d');
-                    },
-                
-                    render: function() {
-                        var duration = 1000;
-                        var t = (performance.now() % duration) / duration;
-                        
-                        var radius = size / 2 * 0.3;
-                        var outerRadius = size / 2 * 0.7 * t + radius;
-                        var context = this.context;
-                        
-                        // draw outer circle
-                        context.clearRect(0, 0, this.width, this.height);
-                        context.beginPath();
-                        context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-                        context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
-                        context.fill();
-                        
-                        // draw inner circle
-                        context.beginPath();
-                        context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-                        context.fillStyle = 'rgba(255, 100, 100, 1)';
-                        context.strokeStyle = 'white';
-                        context.lineWidth = 2 + 4 * (1 - t);
-                        context.fill();
-                        context.stroke();
-                        
-                        // update this image's data with data from the canvas
-                        this.data = context.getImageData(0, 0, this.width, this.height).data;
-                        
-                        // keep the map repainting
-                        map.triggerRepaint();
-                        
-                        return true;
-                    }
-                };
-                
-                map.on('load', function () {
-                
-                map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
-                
-                map.addLayer({
-                    "id": "points",
-                    "type": "symbol",
-                    "source": {
-                    "type": "geojson",
-                    "data": {
-                    "type": "FeatureCollection",
-                    "features": [{
-                    "type": "Feature",
-                    "geometry": {
-                    "type": "Point",
-                    "coordinates": [ -9.428256, 38.699200]
-                    }
-                    }]
-                    }
-                    },
-                    "layout": {
-                    "icon-image": "pulsing-dot"
-                    }
-                    });
-                });
-            </script>
             <div class="widget">
                 <div class="widget_navigation">
                     <button class="widget_navigation-button active" data-tab="1">contact info</button>
                     <button class="widget_navigation-button" data-tab="2">get in touch</button>
                 </div>
-                <h3 class="title title__scissors">
+                <h1 class="title title__small title__scissors">
                     Contact <span class="bright">info</span>
-                </h3>
+                </h1>
                 <div class="widget_tab active" data-tab="1">
                     <div class="contacts">
                         <p class="contacts_address">
@@ -539,6 +451,26 @@
                     </form>
                 </div>
             </div>
+            <div class="page_title-mobile">
+                <h1 class="title title__small title__scissors">
+                    get <span class="bright">directions</span>
+                </h1>
+            </div>
+            <div class="map" id="map"></div>
+            <script>
+                var isMobile = screen.width < 1025;
+                mapboxgl.accessToken = 'pk.eyJ1IjoiY3Nza2luZyIsImEiOiJjank0anpnaXowMDNiM2JwNnpnYXhlcGZ1In0.JqaN0QdsUpWPbwvS7vdN9A';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/dark-v10',
+                    center: isMobile ? [-9.428256, 38.699200] : [-9.427356, 38.699200],
+                    zoom: isMobile ? 16 : 18
+                });
+
+                var marker = new mapboxgl.Marker();
+                marker.setLngLat([-9.428256, 38.699200]);
+                marker.addTo(map);
+            </script>
             <footer class="footer">
                 <p class="copyright">Cuts & Whiskey Men Space - 2019  All right reserved </p>
                 <div class="app">

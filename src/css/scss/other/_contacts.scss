@@ -1,6 +1,10 @@
 .contacts {
-    font-size: $font-size__small;
+    font-size: 14px;
     font-weight: 300;
+    color: $gray_color;
+    @include tablet {
+        font-size: $font-size__small;
+    }
 
     P {
         background-size: 16px auto;

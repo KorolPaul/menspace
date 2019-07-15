@@ -13,7 +13,7 @@
         height: 6px;
         width: 162px;
         background: url(#{$img}/dots.svg) no-repeat center center;
-        background-size: 100% auto;
+        background-size: 80% auto;
     }
     &::after {
         content: '';
@@ -25,9 +25,12 @@
         width: 50px;
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 100% auto;
+        background-size: 80% auto;
     }
 
+    &__small {
+        font-size: 33px;
+    }
     &__shaver {
         &::after {
             background-image: url(#{$img}/shaver.svg);

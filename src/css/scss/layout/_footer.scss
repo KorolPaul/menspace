@@ -1,20 +1,67 @@
 .footer {
-    position: absolute;
-    left: 65px;
-    right: 65px;
-    bottom: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 35px;
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+    @include tablet {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+        padding: 0;
+        width: auto;
+        margin: 0;
+    }
+    @include desktop {
+        flex-wrap: nowrap;
+        left: 65px;
+        right: 65px;
+    }
 
+    &_menu {
+        order: 3;
+        display: flex;
+        justify-content: space-around;
+        order: inherit;
+        @include tablet {
+            width: 30%;
+        }
+        @include desktop {
+            display: block;
+            width: auto;
+        }
+    }
     &_menu-link {
         font-size: $font-size__small;
         font-weight: 400;
-        margin: 0 0 0 60px;
+        margin: 0;
+        @include tablet {
+            margin: 0 0 0 30px;
+        }
+        @include desktop {
+            margin: 0 0 0 60px;
+        }
     }
 }
 
 .copyright {
+    color: $gray_color;
     font-size: $font-size__small;
     font-weight: 300;
+    margin: 0;
+    order: 2;
+    flex-shrink: 2;
+    text-align: center;
+    @include tablet {
+        order: inherit;
+        text-align: left;
+        width: 30%;
+    }
+    @include desktop {
+        width: auto;
+    }
 }

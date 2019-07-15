@@ -17,8 +17,12 @@
         }
     }
     &_title {
-        width: 150px;
-        vertical-align: middle;
+        display: none;
+        @include tablet {
+            display: inline-block;
+            width: 150px;
+            vertical-align: middle;
+        }
         @include desktop {
             width: 196px;
         }
