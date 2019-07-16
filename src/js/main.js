@@ -34,20 +34,18 @@ $(document).ready(function () {
 
     /* Gallery */
     var $sliderItems = $('.slider_item');
-    var $galleryInfo = $('.gallery_info-content');
+    var $galleryImage = $('.gallery_image');
+    var $galleryInfoText = $('.gallery_info-text');
     var $galleryCount = $('.gallery_count-value');
     var $galleryCountTotal = $('.gallery_count-total');
 
     $galleryCountTotal.text($('.slider_column').children().length);
 
     $sliderItems.on('click', function (e) {
-        var title = $(this).find('.title').text();
-        var text = $(this).find('.text').text();
-        var date = $(this).find('.date').text();
         var src = $(this).find('.slider_image').attr('src');
-
-        var $newInfo = $(`<div class="gallery_info-image-wrapper"><img class="gallery_image" src="${src}" alt=""><div class="gallery_info-meta"><p class="gallery_info-title">${title}</p><p class="gallery_info-date">${date}</p></div></div><div class="gallery_info-text">${text}</div>`); 
-        $galleryInfo.html($newInfo);
+        var $newInfo = $(this).find('.slider_item-meta').html(); 
+        $galleryInfoText.html($newInfo);
+        $galleryImage.attr('src', src);
 
         $galleryCount.text($(this).data('number'));
 
@@ -64,11 +62,6 @@ $(document).ready(function () {
         items: 3,
         navContainer: $('.gallery_buttons'),
         navText: ['prev','next'],
-        //responsive : {
-        //    1024 : {
-        //        items: 6
-        //    }
-        //}
     });
 
     /* Tabs */
@@ -85,6 +78,12 @@ $(document).ready(function () {
         }
     });
 
+    /* Counter */
+    var $counter = $('.appointment_button');
+    function generateSymbol() {
+        return Math.random().toString(36).substring(7).substring(0, 1);
+    }
+
     /* Scroll */
     var timeout = 500;
     var isAninimating = false;
@@ -98,6 +97,8 @@ $(document).ready(function () {
         setTimeout(() => {
             isAninimating = false;
         }, timeout);
+
+        $counter.text(generateSymbol());
 
         var page = $pages.eq(activePage);
         if (e) {
@@ -178,6 +179,6 @@ $(document).ready(function () {
         togglePopup();
     });
 
-    $('.fade').on('click', togglePopup)
+    $('.fade').on('click', togglePopup);
 
 });

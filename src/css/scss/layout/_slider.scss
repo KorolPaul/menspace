@@ -13,6 +13,15 @@
         cursor: pointer;
         position: relative;
         margin: 0 0 15px;
+        @include desktop {
+            margin: 0;
+        }
+
+        &:first-child {
+            @include desktop {
+                margin-right: 10px;
+            }
+        }
 
         &::after {
             content: '';

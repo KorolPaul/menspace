@@ -9,6 +9,7 @@
         padding: 15px 40px;
     }
     @include desktop {
+        min-width: 280px;
         padding: 45px 70px;
         position: absolute;
         left: 50%;
@@ -84,6 +85,7 @@
 
         &.active {
             display: block;
+            width: 100%;
         }
     }
 

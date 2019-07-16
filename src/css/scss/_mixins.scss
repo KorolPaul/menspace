@@ -15,6 +15,9 @@
     @media all and (min-width: 1025px) { @content; }
 }
 @mixin media($resolution) {
+    @media all and (min-width: $resolution) { @content; }
+}
+@mixin mediaHeight($resolution) {
     @media all and (min-height: $resolution) { @content; }
 }
 @mixin placeholder-color($color) {

@@ -1,6 +1,6 @@
 $max-height: 980px;
 .services {
-    @include media($max-height) {
+    @include mediaHeight($max-height) {
         width: 690px;
     }
 
@@ -9,7 +9,7 @@ $max-height: 980px;
         @include tablet {
             margin-left: 55px;
         }
-        @include media($max-height) {
+        @include mediaHeight($max-height) {
             margin-bottom: 60px;
         }
     }
@@ -29,7 +29,7 @@ $max-height: 980px;
     @include tablet {
         width: 45%;
     }
-    @include media($max-height) {
+    @include mediaHeight($max-height) {
         width: 100%;
     }
 
