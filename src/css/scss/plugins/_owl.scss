@@ -52,6 +52,8 @@
 .owl-carousel .owl-item img {
     display: block;
     width: 100%;
+    //height: 100%;
+    //object-fit: cover;
 }
 .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {
@@ -162,11 +164,14 @@
     border-radius: 0;
     font: italic 12px $font-family__heading;
     text-transform: uppercase;
-    padding: 12px 20px;
+    padding: 6px 10px;
     cursor: pointer;
     border: none;
     outline: none;
     background: transparent;
+    @include tablet {
+        padding: 12px 20px;
+    }
 }
 
 .owl-prev {

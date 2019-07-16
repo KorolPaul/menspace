@@ -1,24 +1,31 @@
 .popup {
-    padding: 20px 10px 0;
     display: none;
-    margin: auto;
-    width: 100%;
+    background: rgba($dark_color, .75);
     box-sizing: border-box;
-    border-radius: 10px;
-    border: 1pxx solid #30363c;
-    @include tablet {
-        width: auto;
-        padding: 20px 20px 0;
-        min-width: 400px;
-    }
-    @include desktop {
-        box-sizing: border-box;
-        padding-left: 75px;
-        padding-right: 75px;
-        max-width: 600px;
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 111;
 
     &.opened {
-        display: block;
+        display: flex;
     }
+
+    &_content {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }

@@ -15,7 +15,7 @@
     @media all and (min-width: 1025px) { @content; }
 }
 @mixin media($resolution) {
-    @media all and (min-width: $resolution) { @content; }
+    @media all and (min-height: $resolution) { @content; }
 }
 @mixin placeholder-color($color) {
     &::-webkit-input-placeholder {

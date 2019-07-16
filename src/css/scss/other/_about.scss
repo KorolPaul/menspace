@@ -1,16 +1,15 @@
 .about {
     @include desktop {
-        width: 50%;
     }
 
     &_content {
         @include tablet {
             columns: 2;
             column-gap: 40px;
+            //columns: auto;
+            //max-width: 600px;
         }
         @include desktop {
-            columns: auto;
-            max-width: 600px;
         }
     }
 }

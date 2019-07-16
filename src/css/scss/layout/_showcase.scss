@@ -19,52 +19,160 @@
     }
     
     &_video {
+        display: none;
+        @include tablet {
+            display: block;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 65vw;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &_image {
         object-fit: cover;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 65vw;
-        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        @include tablet {
+            display: none;
+        }
     }
     &_bg {
-        background: $dark_color;
+        background: $dark_color url(#{$img}/showcase-bg-mobile.png) center 15% no-repeat;
+        background-size:auto 60%;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: url(#{$img}/showcase-bg.png) center center no-repeat;
-        background-size: 100% 100%;
-        //mask-image: url(#{$img}/showcase-filter.png);
-    }
-    &_logo {
-        background:  url(#{$img}/showcase-filter.png) center center no-repeat;
-        background-size: auto 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 65vw;
-        height: 105vh;
-        transform-origin: center center;
-        transform: translate(-50%, -50%);
+        @include tablet {
+            background: url(#{$img}/showcase-bg.png) center center no-repeat;
+            background-size: 100% 100%;
+        }
 
         &::before {
             content: '';
-            background: #202020;
             position: absolute;
             top: 0;
-            bottom: 0;
-            width: 100%;
-            left: 80%;
+            right: 0;
+            width: 220px;
+            height: 90px;
+            background: url(#{$img}/pluses-bg.png) 100% 0 no-repeat;
+            background-size: 100% auto;
+            @include tablet {
+                display: none;
+            }
         }
         &::after {
             content: '';
-            background: #202020;
             position: absolute;
-            top: 0;
             bottom: 0;
-            width: 100%;
-            right: 80%;
+            left: 0;
+            width: 165px;
+            height: 212px;
+            background: url(#{$img}/lines-bg.png) 0 100% no-repeat;
+            background-size: 100% auto;
+            @include tablet {
+                display: none;
+            }
         }
+    }
+    &_logo {
+        display: none;
+        @include tablet {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 65vw;
+            height: 106vh;
+            top: 50%;
+            left: 50%;
+            transform-origin: center center;
+            transform: translate(-50%, -50%);
+
+            &::before {
+                content: '';
+                background: $dark_color url(#{$img}/pluses-bg.png) 0 30% no-repeat;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                left: 80%;
+                z-index: 2;
+            }
+            &::after {
+                content: '';
+                background: $dark_color url(#{$img}/lines-bg.png) 100% 100% no-repeat;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                right: 80%;
+                z-index: 2;
+            }
+        }
+    }
+    &_logo-image {
+        //position: absolute;
+        height: 100%;
+        object-fit: contain;
+        transform-origin: center center;
+        z-index: 1;
+    }
+    &_mouse {
+        position: absolute;
+        padding: 0 0 70px;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @include tablet {
+            left: 80%;
+            transform: none;
+        }
+
+        &::after {
+            content: '';
+            background: #484848;
+            width: 1px;
+            height: 200px;
+            position: absolute;
+            top: 120%;
+            left: 46%;
+        }
+    }
+    &_mouse-icon {
+        width: 20px;
+        animation: mouse 1.2s ease-out infinite;
+    }
+    &_mouse-text {
+        font: 20px $font-family__heading;
+        text-transform: uppercase;
+        transform-origin: 100% 0;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -63px;
+        top: 47px;
+    }
+}
+
+@keyframes mouse {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
     }
 }

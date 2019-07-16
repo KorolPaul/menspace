@@ -1,25 +1,35 @@
 .page {
     min-height: 100vh;
+    box-sizing: border-box;
     position: relative;
-    padding: 0 20px;
+    padding: 100px 20px 40px;
     box-sizing: border-box;
     @include tablet {
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
-        padding: 0 40px;
+        padding: 100px 40px 40px;
         filter: blur(15px);
         transform: translateY(-100%);
         transition: .5s ease-in-out transform, .5s ease-in-out filter;
+        will-change: transfrorm;
+    }
+    @include desktop {
+        height: 100%;
+        padding: 140px 160px 40px;
     }
 
     &.active {
-        transform: translateY(0);
-        filter: blur(0px);
+        @include tablet {
+            transform: translateY(0);
+            filter: blur(0px);
+        }
     }
     &.active ~ & {
-        transform: translateY(100%);
+        @include tablet {
+            transform: translateY(100%);
+        }
     }
 
     &_title-mobile {
@@ -30,6 +40,7 @@
     }
     &__main {
         padding: 0;
+        z-index: 1;
         @include tablet {
             overflow: hidden;
         }
@@ -81,9 +92,13 @@
             justify-content: center;
             align-items: center;
         }
+        @include desktop {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &__contacts {
-        padding-top: 90px;
+        padding-top: 140px;
         @include tablet {
             padding: 0 40px;
             display: flex;

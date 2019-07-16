@@ -84,17 +84,24 @@
         <a href="#contact" class="pages_link">contact</a>
     </nav>
     <main class="content">
-        <div class="page page__main active">
+        <div class="page page__main active" id="main">
             <div class="showcase">
                 <div class="showcase_bg"></div>
-                <div class="showcase_logo"></div>
+                <div class="showcase_logo">
+                    <img class="showcase_logo-image" src="/src/img/showcase-filter.png" alt="" />
+                </div>
+                <div class="showcase_mouse">
+                    <img  class="showcase_mouse-icon" src="/src/img/mouse.svg" alt="">
+                    <span class="showcase_mouse-text">scroll</span>
+                </div>
             </div>
-            <video class="showcase_video" autoplay loop muted poster="src/video.jpg">
+            <video class="showcase_video" autoplay loop muted poster="src/img/video.jpg">
                 <source src="src/img/video.mp4" type="video/mp4">
                 <source src="src/img/video.webm" type="video/webm">
             </video>
+            <img class="showcase_image" src="src/img/video.jpg" alt="">
         </div>
-        <div class="page page__about">
+        <div class="page page__about" id="about">
             <article class="about">
                 <h1 class="title title__shaver">ABOUT <span class="bright">US</span></h1>
                 <div class="about_content">
@@ -104,7 +111,7 @@
                 </div>
             </article>
         </div>
-        <div class="page page__services">
+        <div class="page page__services" id="services">
             <div class="services">
                 <div class="services_title">
                     <h1 class="title title__instruments">services</h1>
@@ -117,6 +124,9 @@
                         <div class="service_content">
                             <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
+                            <div class="service_video">
+                                <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="service">
@@ -126,6 +136,9 @@
                         <div class="service_content">
                             <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
+                            <div class="service_video">
+                                <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="service">
@@ -135,6 +148,9 @@
                         <div class="service_content">
                             <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
+                            <div class="service_video">
+                                <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="service">
@@ -144,12 +160,15 @@
                         <div class="service_content">
                             <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
+                            <div class="service_video">
+                                <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page page__pricelist">
+        <div class="page page__pricelist" id="price-lists">
             <div>
                 <h1 class="title title__mustache">prices <span>list</span></h1>
                 <div class="prices">
@@ -252,7 +271,7 @@
                 </div>
             </div>
         </div>
-        <div class="page page__gallery">
+        <div class="page page__gallery" id="gallery">
             <div class="gallery">
                 <div class="gallery_title">
                     <h1 class="title title__hairbrush">gallery</h1>
@@ -397,7 +416,7 @@
                 </div>
             </div>
         </div>
-        <div class="page page__contacts">
+        <div class="page page__contacts" id="contact">
             <div class="widget">
                 <div class="widget_navigation">
                     <button class="widget_navigation-button active" data-tab="1">contact info</button>
@@ -489,6 +508,10 @@
             </footer>
         </div>
     </main>
+    <div class="popup">
+        <div class="fade"></div>
+        <div class="popup_content"></div>
+    </div>
 
     <script src="./src/js/jquery-3.4.1.min.js"></script>
     <script src="./src/js/owl.carousel.min.js"></script>
