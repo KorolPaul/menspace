@@ -85,7 +85,7 @@ $(document).ready(function () {
     }
 
     /* Scroll */
-    var timeout = 500;
+    var timeout = 1000;
     var isAninimating = false;
     var activePage = 0;
     var $pages = $('.page');
@@ -125,7 +125,7 @@ $(document).ready(function () {
     }
 
     if (!isMobile) {
-        document.addEventListener('wheel', scrollPages);
+        document.addEventListener('wheel', scrollPages, { capture: false, passive: true });
     }
 
     $('.menu_link').on('click', function() {
@@ -158,7 +158,10 @@ $(document).ready(function () {
     window.addEventListener('popstate', function() {
         navigateToPage();
     });
+
+    window.scrollTo(0, 0);
     navigateToPage();
+
 
     /* Popup */
     var $popup = $('.popup');

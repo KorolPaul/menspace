@@ -82,7 +82,6 @@
         <a href="#gallery" class="pages_link">gallery</a>
         <a href="#contact" class="pages_link">contact</a>
     </nav>
-    <main class="content">
         <div class="page page__main active" id="main">
             <div class="showcase">
                 <div class="showcase_bg"></div>
@@ -504,14 +503,14 @@
                 var map = new mapboxgl.Map({
                     container: 'map',
                     style: 'mapbox://styles/mapbox/dark-v10',
-                    center: isMobile ? [-9.428256, 38.699200] : [-9.427356, 38.699200],
+                    center: isMobile ? [-9.427870, 38.699050] : [-9.427270, 38.699050],
                     zoom: isMobile ? 16 : 18
                 });
 
                 map.scrollZoom.disable();
                 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
                 var marker = new mapboxgl.Marker();
-                marker.setLngLat([-9.428256, 38.699200]);
+                marker.setLngLat([-9.427870, 38.699050]);
                 marker.addTo(map);
             </script>
             <footer class="footer">
@@ -531,7 +530,6 @@
                 </div>
             </footer>
         </div>
-    </main>
     <div class="popup">
         <div class="fade"></div>
         <div class="popup_content"></div>
