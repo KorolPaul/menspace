@@ -1117,17 +1117,9 @@ h3,
   }
 }
 
-.content_holder {
-  padding-left: 10px;
-  padding-right: 10px;
-  box-sizing: border-box;
-}
-
 @media all and (min-width: 769px) {
-  .content_holder {
-    max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
+  .content {
+    height: 100vh;
   }
 }
 
@@ -1303,7 +1295,8 @@ h3,
 
 @media all and (min-width: 1025px) {
   .page {
-    height: 100%;
+    min-height: 0;
+    bottom: 0;
     padding: 140px 160px 40px;
   }
 }
@@ -1313,6 +1306,7 @@ h3,
     transform: translateY(0);
     -webkit-filter: blur(0px);
     filter: blur(0px);
+    z-index: 1;
   }
 }
 
@@ -1779,9 +1773,9 @@ h3,
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 10px;
-  width: 10px;
-  margin: -5px 0 0 -6px;
+  height: 80px;
+  width: 80px;
+  margin: -41px 0 0 -41px;
   background: rgba(143, 123, 84, 0.8);
   border-radius: 50%;
   -webkit-animation: 1.8s radialWave linear infinite;
@@ -1804,30 +1798,30 @@ h3,
 @-webkit-keyframes radialWave {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(0.1);
   }
   50% {
     opacity: 1;
-    transform: scale(4);
+    transform: scale(0.5);
   }
   100% {
     opacity: 0;
-    transform: scale(8);
+    transform: scale(1);
   }
 }
 
 @keyframes radialWave {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(0.1);
   }
   50% {
     opacity: 1;
-    transform: scale(4);
+    transform: scale(0.5);
   }
   100% {
     opacity: 0;
-    transform: scale(8);
+    transform: scale(1);
   }
 }
 
@@ -2144,6 +2138,14 @@ h3,
     columns: 2;
     -moz-column-gap: 40px;
     column-gap: 40px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .about_content {
+    -moz-columns: auto;
+    columns: auto;
+    max-width: 600px;
   }
 }
 

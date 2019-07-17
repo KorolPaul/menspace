@@ -15,7 +15,9 @@
         will-change: transfrorm;
     }
     @include desktop {
-        height: 100%;
+        min-height: 0;
+        bottom: 0;
+        //height: 100%;
         padding: 140px 160px 40px;
     }
 
@@ -23,6 +25,7 @@
         @include tablet {
             transform: translateY(0);
             filter: blur(0px);
+            z-index: 1;
         }
     }
     &.active ~ & {

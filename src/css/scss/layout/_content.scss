@@ -1,6 +1,5 @@
 .content {
-    
-    &_holder {
-        @include layout;
+    @include tablet {
+        height: 100vh;
     }
 }
