@@ -34,9 +34,9 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            height: 10px;
-            width: 10px;
-            margin: -10px 0 0 -6px;
+            height: 140px;
+            width: 140px;
+            margin: -75px 0 0 -71px;
             background: rgba($bright_color, .5);
             border-radius: 50%;
             animation: 1.8s wave linear infinite;
@@ -50,14 +50,14 @@
 @keyframes wave {
     0% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(.1);
     }
     50% {
         opacity: 1;
-        transform: scale(7);
+        transform: scale(.5);
     }
     100% {
         opacity: 0;
-        transform: scale(14);
+        transform: scale(1);
     }
 }

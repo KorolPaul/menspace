@@ -39,7 +39,7 @@
                 <a href="#about" class="menu_link">ABOUT US</a>
                 <a href="#services" class="menu_link">SERVICES</a>
                 <a href="#price-lists" class="menu_link">PRICE LISTS</a>
-                <a href="#appointment" class="menu_link">make an appointment</a>
+                <a href="/google" class="menu_link">make an appointment</a>
                 <a href="#gallery" class="menu_link">gallery</a>
                 <a href="#contact" class="menu_link">contact</a>
             </nav>
@@ -59,7 +59,6 @@
                 <a href="#" class="social_link social_link__fb">facebook</a>
                 <a href="#" class="social_link social_link__instagram">instagram</a>
                 <a href="#" class="social_link social_link__youtube">youtube</a>
-                <a href="#" class="social_link social_link__twitter">twitter</a>
             </div>
         </div>
     </div>
@@ -114,7 +113,7 @@
         <div class="page page__services" id="services">
             <div class="services">
                 <div class="services_title">
-                    <h1 class="title title__instruments">services</h1>
+                    <h1>SERVICES</h1>
                 </div>
                 <div class="services_list">
                     <div class="service">
@@ -170,7 +169,7 @@
         </div>
         <div class="page page__pricelist" id="price-lists">
             <div>
-                <h1 class="title title__mustache">prices <span>list</span></h1>
+                <h1>PRICES <span class="bright">LIST</span></h1>
                 <div class="prices">
                     <div class="price">
                         <div class="price_header">
@@ -471,7 +470,6 @@
                         <a href="#" class="social_link social_link__fb">facebook</a>
                         <a href="#" class="social_link social_link__instagram">instagram</a>
                         <a href="#" class="social_link social_link__youtube">youtube</a>
-                        <a href="#" class="social_link social_link__twitter">twitter</a>
                     </div>
                 </div>
                 <div class="widget_tab" data-tab="2">
@@ -510,6 +508,8 @@
                     zoom: isMobile ? 16 : 18
                 });
 
+                map.scrollZoom.disable();
+                map.addControl(new mapboxgl.NavigationControl(), 'top-left');
                 var marker = new mapboxgl.Marker();
                 marker.setLngLat([-9.428256, 38.699200]);
                 marker.addTo(map);

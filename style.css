@@ -424,7 +424,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +450,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -1191,6 +1191,7 @@ h3,
   background: url(src/img/planet.svg) no-repeat 0 center;
   background-size: 15px auto;
   padding: 0 0 0 45px;
+  position: relative;
 }
 
 .lang_item {
@@ -1283,7 +1284,6 @@ h3,
   box-sizing: border-box;
   position: relative;
   padding: 100px 20px 40px;
-  box-sizing: border-box;
 }
 
 @media all and (min-width: 769px) {
@@ -1556,42 +1556,7 @@ h3,
 
 @media all and (min-width: 769px) {
   .showcase_bg {
-    background: url(src/img/showcase-bg.png) center center no-repeat;
-    background-size: 100% 100%;
-  }
-}
-
-.showcase_bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 220px;
-  height: 90px;
-  background: url(src/img/pluses-bg.png) 100% 0 no-repeat;
-  background-size: 100% auto;
-}
-
-@media all and (min-width: 769px) {
-  .showcase_bg::before {
-    display: none;
-  }
-}
-
-.showcase_bg::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 165px;
-  height: 212px;
-  background: url(src/img/lines-bg.png) 0 100% no-repeat;
-  background-size: 100% auto;
-}
-
-@media all and (min-width: 769px) {
-  .showcase_bg::after {
-    display: none;
+    background: transparent;
   }
 }
 
@@ -1611,9 +1576,18 @@ h3,
     transform-origin: center center;
     transform: translate(-50%, -50%);
   }
+}
+
+@media all and (min-width: 769px) and (min-width: 769px) {
+  .showcase_logo {
+    box-shadow: 0 0 0 500px #202020;
+  }
+}
+
+@media all and (min-width: 769px) {
   .showcase_logo::before {
     content: '';
-    background: #202020 url(src/img/pluses-bg.png) 0 30% no-repeat;
+    background: #202020;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1623,7 +1597,7 @@ h3,
   }
   .showcase_logo::after {
     content: '';
-    background: #202020 url(src/img/lines-bg.png) 100% 100% no-repeat;
+    background: #202020;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1639,6 +1613,27 @@ h3,
   object-fit: contain;
   transform-origin: center center;
   z-index: 1;
+}
+
+@media all and (min-width: 769px) {
+  .showcase_logo-image::before, .showcase_logo-image::after {
+    content: '';
+    background: #202020;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 300px;
+    z-index: 2;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .showcase_logo-image::after {
+    bottom: auto;
+    top: 100%;
+    height: 300px;
+  }
 }
 
 .showcase_mouse {
@@ -1776,7 +1771,27 @@ h3,
   width: 55px;
   text-align: center;
   padding: 0;
-  box-shadow: 0 0 0 6px rgba(143, 123, 84, 0.25), 0 0 0 13px rgba(143, 123, 84, 0.15);
+  position: relative;
+}
+
+.appointment_button::before, .appointment_button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  margin: -5px 0 0 -6px;
+  background: rgba(143, 123, 84, 0.8);
+  border-radius: 50%;
+  -webkit-animation: 1.8s radialWave linear infinite;
+  animation: 1.8s radialWave linear infinite;
+  z-index: -1;
+}
+
+.appointment_button::after {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s;
 }
 
 .appointment_title {
@@ -1784,6 +1799,36 @@ h3,
   text-align: center;
   width: 100px;
   margin: 0 0 0 15px;
+}
+
+@-webkit-keyframes radialWave {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(8);
+  }
+}
+
+@keyframes radialWave {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(8);
+  }
 }
 
 .app {
@@ -1862,9 +1907,9 @@ h3,
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 10px;
-  width: 10px;
-  margin: -10px 0 0 -6px;
+  height: 140px;
+  width: 140px;
+  margin: -75px 0 0 -71px;
   background: rgba(143, 123, 84, 0.5);
   border-radius: 50%;
   -webkit-animation: 1.8s wave linear infinite;
@@ -1879,30 +1924,30 @@ h3,
 @-webkit-keyframes wave {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(0.1);
   }
   50% {
     opacity: 1;
-    transform: scale(7);
+    transform: scale(0.5);
   }
   100% {
     opacity: 0;
-    transform: scale(14);
+    transform: scale(1);
   }
 }
 
 @keyframes wave {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(0.1);
   }
   50% {
     opacity: 1;
-    transform: scale(7);
+    transform: scale(0.5);
   }
   100% {
     opacity: 0;
-    transform: scale(14);
+    transform: scale(1);
   }
 }
 

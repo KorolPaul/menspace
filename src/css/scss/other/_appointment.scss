@@ -19,13 +19,45 @@
         width: 55px;
         text-align: center;
         padding: 0;
-        box-shadow: 0 0 0 6px rgba($bright_color, .25),
-                    0 0 0 13px rgba($bright_color, .15);
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 10px;
+            width: 10px;
+            margin: -5px 0 0 -6px;
+            background: rgba($bright_color, .8);
+            border-radius: 50%;
+            animation: 1.8s radialWave linear infinite;
+            z-index: -1;
+        }
+        &::after {
+            animation-delay: .9s;
+        }
     }
     &_title {
         font-family: $font-family__heading;
         text-align: center;
         width: 100px;
         margin: 0 0 0 15px;
+    }
+}
+
+@keyframes radialWave {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(4);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(8);
     }
 }

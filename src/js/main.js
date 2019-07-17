@@ -112,7 +112,7 @@ $(document).ready(function () {
             } else {
                 if (activePage === 0) {
                     page.removeClass('scaled')
-                } else if (activePage !== 5) {
+                } else {
                     activePage--
                 }
             }
@@ -128,13 +128,8 @@ $(document).ready(function () {
         document.addEventListener('wheel', scrollPages);
     }
 
-    $navigation.on('click', function(e) {
-        if (!isMobile) {
-            e.preventDefault();
-            var index = $(this).index();
-            activePage = index;
-            scrollPages(false);
-        }
+    $('.menu_link').on('click', function() {
+        toggleMenu();
     });
 
     /* Navigation */
@@ -160,7 +155,9 @@ $(document).ready(function () {
         }
         scrollPages();
     }
-    window.addEventListener('popstate', navigateToPage);
+    window.addEventListener('popstate', function() {
+        navigateToPage();
+    });
     navigateToPage();
 
     /* Popup */
