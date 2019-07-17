@@ -91,8 +91,8 @@ $(document).ready(function () {
     var $pages = $('.page');
     var $navigation = $('.pages_link');
 
-    function scrollPages(e) {
-        if (isAninimating) { return }
+    function scrollPages(e, inverse = false) {
+        if (isAninimating && !inverse) { return }
         isAninimating = true;
         setTimeout(() => {
             isAninimating = false;
@@ -103,6 +103,9 @@ $(document).ready(function () {
         var page = $pages.eq(activePage);
         if (e) {
             var isScrollDown = e.deltaY >= 0;
+            if (inverse) {
+                isScrollDown = !isScrollDown;
+            }
             if (isScrollDown) {
                 if (activePage === 0 && !page.hasClass('scaled')) {
                     page.addClass('scaled')
@@ -161,6 +164,12 @@ $(document).ready(function () {
 
     window.scrollTo(0, 0);
     navigateToPage();
+
+    var hammer = new Hammer(document.body, {});
+    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    hammer.on('swipe', function(e) {
+        scrollPages(e, true);
+    });
 
 
     /* Popup */
