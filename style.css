@@ -424,7 +424,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +450,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -763,7 +763,7 @@ h3,
 
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .sidebar {
@@ -1035,7 +1035,7 @@ h3,
   position: fixed;
   right: 20px;
   top: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media all and (min-width: 1025px) {
@@ -1329,13 +1329,17 @@ h3,
 
 .page__main {
   padding: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 @media all and (min-width: 769px) {
   .page__main {
     overflow: hidden;
   }
+}
+
+.page__main.active {
+  z-index: 3;
 }
 
 .page__about {

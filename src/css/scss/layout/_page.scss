@@ -43,9 +43,13 @@
     }
     &__main {
         padding: 0;
-        z-index: 1;
+        z-index: 3;
         @include tablet {
             overflow: hidden;
+        }
+
+        &.active {
+            z-index: 3;
         }
     }
     &__about {
