@@ -10,11 +10,14 @@
     }
     @include desktop {
         min-width: 280px;
-        padding: 45px 70px;
+        padding: 15px 70px 25px;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(60px, -50%);
+    }
+    @include mediaHeight(820px) {
+        padding: 45px 70px;
     }
 
     &::after {
