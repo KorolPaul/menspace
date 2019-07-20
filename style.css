@@ -357,6 +357,10 @@ html {
   }
 }
 
+.sidebar-opened {
+  overflow: hidden;
+}
+
 body {
   background: #242424;
   color: #fff;
@@ -424,7 +428,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +454,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -796,12 +800,20 @@ h3,
 .sidebar::before {
   content: 'MENU';
   color: rgba(219, 219, 219, 0.03);
-  font-size: 164px;
+  font-size: 94px;
   line-height: 1;
   font-weight: 900;
   position: absolute;
-  top: -30px;
-  right: -10px;
+  top: -11px;
+  right: 0px;
+}
+
+@media all and (min-width: 769px) {
+  .sidebar::before {
+    font-size: 164px;
+    top: -30px;
+    right: -10px;
+  }
 }
 
 .sidebar.opened {
@@ -819,6 +831,7 @@ h3,
   font: 300 13px "Oswald", sans-serif;
   text-transform: uppercase;
   transition: .2s ease-in-out color;
+  z-index: 2;
 }
 
 .sidebar_close::before, .sidebar_close::after {
@@ -1272,7 +1285,6 @@ h3,
 }
 
 .page {
-  min-height: 100vh;
   box-sizing: border-box;
   position: relative;
   padding: 100px 20px 40px;
@@ -1280,6 +1292,7 @@ h3,
 
 @media all and (min-width: 769px) {
   .page {
+    min-height: 100vh;
     position: absolute;
     left: 0;
     right: 0;
@@ -1330,6 +1343,7 @@ h3,
 .page__main {
   padding: 0;
   z-index: 3;
+  overflow: hidden;
 }
 
 @media all and (min-width: 769px) {
@@ -1489,7 +1503,9 @@ h3,
 .showcase {
   position: relative;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
+  overflow: hidden;
+  transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
 }
 
 @media all and (min-width: 769px) {
@@ -1499,7 +1515,6 @@ h3,
     left: 0;
     right: 0;
     bottom: 0;
-    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
   }
 }
 
@@ -1551,12 +1566,18 @@ h3,
   left: 0;
   right: 0;
   bottom: 0;
+  transition: .3s ease-in-out transform;
+  z-index: 3;
 }
 
 @media all and (min-width: 769px) {
   .showcase_bg {
     background: transparent;
   }
+}
+
+.showcase.scrolled .showcase_bg {
+  transform: translateY(-100%);
 }
 
 .showcase_logo {
@@ -1637,10 +1658,11 @@ h3,
 
 .showcase_mouse {
   position: absolute;
-  padding: 0 0 70px;
-  bottom: 50px;
+  padding: 0 0 120px;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  z-index: 3;
 }
 
 @media all and (min-width: 769px) {
@@ -1654,9 +1676,9 @@ h3,
   content: '';
   background: #484848;
   width: 1px;
-  height: 200px;
   position: absolute;
-  top: 120%;
+  top: 80%;
+  bottom: 0;
   left: 46%;
 }
 
@@ -1674,6 +1696,50 @@ h3,
   position: absolute;
   left: -63px;
   top: 47px;
+}
+
+.showcase_mobile-video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (min-width: 769px) {
+  .showcase_mobile-video {
+    display: none;
+  }
+}
+
+.showcase_mobile-video iframe {
+  margin: auto;
+  width: 90vw;
+}
+
+.showcase.scrolled ~ .showcase_mobile-video {
+  z-index: 4;
+}
+
+.showcase_mobile-video-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@media all and (min-width: 769px) {
+  .showcase_mobile-video-bg {
+    display: none;
+  }
+}
+
+.showcase.scrolled ~ .showcase_mobile-video-bg {
+  z-index: 3;
 }
 
 @-webkit-keyframes mouse {
@@ -1733,6 +1799,20 @@ h3,
 .popup_content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media all and (min-width: 769px) {
+  .popup_content {
+    width: auto;
+    padding: 0;
+    min-width: 700px;
+  }
+}
+
+.popup_content iframe {
+  width: 100%;
 }
 
 .fade {

@@ -1,9 +1,9 @@
 .page {
-    min-height: 100vh;
     box-sizing: border-box;
     position: relative;
     padding: 100px 20px 40px;
     @include tablet {
+        min-height: 100vh;
         position: absolute;
         left: 0;
         right: 0;
@@ -44,6 +44,7 @@
     &__main {
         padding: 0;
         z-index: 3;
+        overflow: hidden;
         @include tablet {
             overflow: hidden;
         }

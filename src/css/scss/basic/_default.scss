@@ -5,6 +5,10 @@ html {
     }
 }
 
+.sidebar-opened {
+    overflow: hidden;
+}
+
 body {
     background: $bg_color;
     color: $color;

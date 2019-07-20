@@ -24,12 +24,18 @@
     &::before {
         content: 'MENU';
         color: rgba($gray_color, .03);
-        font-size: 164px;
+        font-size: 94px;
         line-height: 1;
         font-weight: 900;
         position: absolute;
-        top: -30px;
-        right: -10px;
+        top: -11px;
+        right: 0px;
+
+        @include tablet {
+            font-size: 164px;
+            top: -30px;
+            right: -10px;
+        }
     }
 
     &.opened {
@@ -47,6 +53,7 @@
         font: 300 13px $font-family__heading;
         text-transform: uppercase;
         transition: .2s ease-in-out color;
+        z-index: 2;
 
         &::before,
         &::after  {
