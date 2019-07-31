@@ -27,7 +27,7 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('img', function() {
+gulp.task('img-resize', function() {
     return gulp.src('src/img/slider/*')
         .pipe(imageResize({
             width : 320,
@@ -35,6 +35,12 @@ gulp.task('img', function() {
             crop : false,
             upscale : true
         }))
+        .pipe(gulp.dest('dist'))
+});
+
+gulp.task('img', function() {
+    return gulp.src('src/img/*.jpg')
+        .pipe(imagemin())
         .pipe(gulp.dest('dist'))
 });
 
