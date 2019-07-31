@@ -6,6 +6,7 @@
         }
         @include desktop {
             display: flex;
+            justify-content: space-between;
         }
     }
     &_item {
@@ -15,6 +16,7 @@
         margin: 0 0 15px;
         @include desktop {
             margin: 0;
+            width: 49%;
         }
 
         &:first-child {

@@ -43,7 +43,7 @@ $(document).ready(function () {
     $galleryCountTotal.text($('.slider_column').children().length);
 
     $sliderItems.on('click', function (e) {
-        var src = $(this).find('.slider_image').attr('src');
+        var src = $(this).data('src');
         var $newInfo = $(this).find('.slider_item-meta').html(); 
         $galleryInfoText.html($newInfo);
         $galleryImage.attr('src', src);
@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
 
     $('.slider').owlCarousel({
-        loop: false,
+        loop: true,
         margin: 10,
         nav: false,
         nav: true,
@@ -166,38 +166,36 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
     navigateToPage();
 
-    if (!isMobile) {
         var hammer = new Hammer(document.body, {});
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
         hammer.on('swipe', function(e) {
             scrollPages(e, true);
         });
-    } else {
-        $showcase = $('.showcase');
-        var hammer = new Hammer(document.querySelector('.showcase_bg'));
-        hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-        hammer.on('swipe', function ev(e) {
-            if (e.deltaY < 0 ) {
-                $showcase.addClass('scrolled');
-            }
-        });
-        var hammer2 = new Hammer(document.querySelector('.showcase_mobile-video-bg'));
-        hammer2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-        hammer2.on('swipe', function ev(e) {
-            if (e.deltaY > 0 ) {
-                $showcase.removeClass('scrolled');
-            } else {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $(".page__about").offset().top
-                }, 100, "linear");
-            };
-        });
-    }
+    //else {
+    //    $showcase = $('.showcase');
+    //    var hammer = new Hammer(document.querySelector('.showcase_bg'));
+    //    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    //    hammer.on('swipe', function ev(e) {
+    //        if (e.deltaY < 0 ) {
+    //            $showcase.addClass('scrolled');
+    //        }
+    //    });
+    //    var hammer2 = new Hammer(document.querySelector('.showcase_mobile-video-bg'));
+    //    hammer2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    //    hammer2.on('swipe', function ev(e) {
+    //        if (e.deltaY > 0 ) {
+    //            $showcase.removeClass('scrolled');
+    //        } else {
+    //            $([document.documentElement, document.body]).animate({
+    //                scrollTop: $(".page__about").offset().top
+    //            }, 100, "linear");
+    //        };
+    //    });
+    //}
 
     /* Load videos */
     if (!isMobile) {
         $('video source').each(function(e) {
-            console.log($(this).data('src'))
             $(this).attr('src', $(this).data('src'))
         });
         document.querySelector('video').load();

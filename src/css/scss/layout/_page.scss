@@ -1,3 +1,8 @@
+body {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
 .page {
     box-sizing: border-box;
     position: relative;
@@ -9,9 +14,11 @@
         right: 0;
         top: 0;
         padding: 100px 40px 40px;
-        filter: blur(15px);
-        transform: translateY(-100%);
-        transition: .5s ease-in-out transform, .5s ease-in-out filter;
+        //filter: blur(15px);
+        transform: translateY(-100%) rotateX(45deg);
+        transform-origin: center 0%;
+
+        transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
         will-change: transfrorm;
     }
     @include desktop {
@@ -24,14 +31,15 @@
 
     &.active {
         @include tablet {
-            transform: translateY(0);
-            filter: blur(0px);
+            transform: translateY(0) rotateX(0deg);
+            //filter: blur(0px);
             z-index: 1;
+            transform-origin: center 100%;
         }
     }
     &.active ~ & {
         @include tablet {
-            transform: translateY(100%);
+            transform: translateY(100%) rotateX(45deg);
         }
     }
 
