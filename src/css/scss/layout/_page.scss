@@ -5,42 +5,33 @@ body {
 
 .page {
     box-sizing: border-box;
-    position: relative;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     padding: 100px 20px 40px;
+    transform: translateY(-100%) rotateX(45deg);
+    transform-origin: center 0%;
+    transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
+    will-change: transfrorm;
     @include tablet {
-        min-height: 100vh;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
         padding: 100px 40px 40px;
-        //filter: blur(15px);
-        transform: translateY(-100%) rotateX(45deg);
-        transform-origin: center 0%;
-
-        transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
-        will-change: transfrorm;
     }
     @include desktop {
         min-height: 0;
         bottom: 0;
-        //height: 100%;
         padding: 140px 160px 40px;
         isolation: isolate;
     }
 
     &.active {
-        @include tablet {
-            transform: translateY(0) rotateX(0deg);
-            //filter: blur(0px);
-            z-index: 1;
-            transform-origin: center 100%;
-        }
+        transform: translateY(0) rotateX(0deg);
+        z-index: 1;
+        transform-origin: center 100%;
     }
     &.active ~ & {
-        @include tablet {
-            transform: translateY(100%) rotateX(45deg);
-        }
+        transform: translateY(100%) rotateX(45deg);
     }
 
     &_title-mobile {
@@ -53,9 +44,6 @@ body {
         padding: 0;
         z-index: 3;
         overflow: hidden;
-        @include tablet {
-            overflow: hidden;
-        }
 
         &.active {
             z-index: 3;

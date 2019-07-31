@@ -54,6 +54,7 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    /* Gallery slider */
     $('.slider').owlCarousel({
         loop: true,
         margin: 10,
@@ -64,6 +65,19 @@ $(document).ready(function () {
         navContainer: $('.gallery_buttons'),
         navText: ['prev','next'],
     });
+
+    /* Prices slider */
+    if (isMobile) {
+        $('.prices, .services_list').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            nav: false,
+            dots: true,
+            items: 1,
+            navText: ['prev','next'],
+        });
+    }
 
     /* Tabs */
     $tabButtons = $('.widget_navigation-button');
@@ -166,11 +180,11 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
     navigateToPage();
 
-        var hammer = new Hammer(document.body, {});
-        hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-        hammer.on('swipe', function(e) {
-            scrollPages(e, true);
-        });
+    var hammer = new Hammer(document.body, {});
+    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    hammer.on('swipe', function(e) {
+        scrollPages(e, true);
+    });
     //else {
     //    $showcase = $('.showcase');
     //    var hammer = new Hammer(document.querySelector('.showcase_bg'));

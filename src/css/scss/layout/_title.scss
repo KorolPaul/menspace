@@ -1,31 +1,37 @@
 .title {
-    padding: 30px 0 0;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
+    @include tablet {
+        padding: 30px 0 0;
+    };
     
     &::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: -5px;
-        transform: translate(-50%, 0);
-        height: 6px;
-        width: 162px;
-        background: url(#{$img}/dots.svg) no-repeat center center;
-        background-size: 80% auto;
+        @include tablet {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -5px;
+            transform: translate(-50%, 0);
+            height: 6px;
+            width: 162px;
+            background: url(#{$img}/dots.svg) no-repeat center center;
+            background-size: 80% auto;
+        }
     }
     &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: -30px;
-        transform: translate(-50%, 0);
-        height: 55px;
-        width: 50px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 80% auto;
+        @include tablet {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -30px;
+            transform: translate(-50%, 0);
+            height: 55px;
+            width: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80% auto;
+        }
     }
 
     &__small {

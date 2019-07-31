@@ -1,8 +1,9 @@
 %heading-1 {
     font: 41px $font-family__heading;
-    margin: 40px 0 20px;
+    margin: 0 0 20px;
     @include tablet {
         font-size: 58px;
+        margin: 40px 0 20px;
     }
 }
 %heading-2 {

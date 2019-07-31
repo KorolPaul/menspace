@@ -5,6 +5,11 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
+    &_slide {
+        @include tablet {
+            display: contents;
+        }
+    }
 }
 
 .price {

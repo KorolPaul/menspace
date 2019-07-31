@@ -348,13 +348,7 @@ template {
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-@media all and (min-width: 769px) {
-  html {
-    overflow: hidden;
-  }
+  overflow: hidden;
 }
 
 .sidebar-opened {
@@ -611,13 +605,14 @@ label {
 h1,
 .heading-1 {
   font: 41px "Oswald", sans-serif;
-  margin: 40px 0 20px;
+  margin: 0 0 20px;
 }
 
 @media all and (min-width: 769px) {
   h1,
   .heading-1 {
     font-size: 58px;
+    margin: 40px 0 20px;
   }
 }
 
@@ -1011,35 +1006,44 @@ h3,
 }
 
 .title {
-  padding: 30px 0 0;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
 }
 
-.title::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -5px;
-  transform: translate(-50%, 0);
-  height: 6px;
-  width: 162px;
-  background: url(src/img/dots.svg) no-repeat center center;
-  background-size: 80% auto;
+@media all and (min-width: 769px) {
+  .title {
+    padding: 30px 0 0;
+  }
 }
 
-.title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -30px;
-  transform: translate(-50%, 0);
-  height: 55px;
-  width: 50px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 80% auto;
+@media all and (min-width: 769px) {
+  .title::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translate(-50%, 0);
+    height: 6px;
+    width: 162px;
+    background: url(src/img/dots.svg) no-repeat center center;
+    background-size: 80% auto;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    transform: translate(-50%, 0);
+    height: 55px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80% auto;
+  }
 }
 
 .title__small {
@@ -1167,22 +1171,21 @@ body {
 
 .page {
   box-sizing: border-box;
-  position: relative;
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   padding: 100px 20px 40px;
+  transform: translateY(-100%) rotateX(45deg);
+  transform-origin: center 0%;
+  transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
+  will-change: transfrorm;
 }
 
 @media all and (min-width: 769px) {
   .page {
-    min-height: 100vh;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
     padding: 100px 40px 40px;
-    transform: translateY(-100%) rotateX(45deg);
-    transform-origin: center 0%;
-    transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
-    will-change: transfrorm;
   }
 }
 
@@ -1195,18 +1198,14 @@ body {
   }
 }
 
-@media all and (min-width: 769px) {
-  .page.active {
-    transform: translateY(0) rotateX(0deg);
-    z-index: 1;
-    transform-origin: center 100%;
-  }
+.page.active {
+  transform: translateY(0) rotateX(0deg);
+  z-index: 1;
+  transform-origin: center 100%;
 }
 
-@media all and (min-width: 769px) {
-  .page.active ~ .page {
-    transform: translateY(100%) rotateX(45deg);
-  }
+.page.active ~ .page {
+  transform: translateY(100%) rotateX(45deg);
 }
 
 .page_title-mobile {
@@ -1223,12 +1222,6 @@ body {
   padding: 0;
   z-index: 3;
   overflow: hidden;
-}
-
-@media all and (min-width: 769px) {
-  .page__main {
-    overflow: hidden;
-  }
 }
 
 .page__main.active {
@@ -1380,21 +1373,14 @@ body {
 }
 
 .showcase {
-  position: relative;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 3;
   overflow: hidden;
   transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
-}
-
-@media all and (min-width: 769px) {
-  .showcase {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
 }
 
 @media all and (min-width: 769px) {
@@ -1474,11 +1460,6 @@ body {
     transform-origin: center center;
     transform: translate(-50%, -50%);
     z-index: 3;
-  }
-}
-
-@media all and (min-width: 769px) and (min-width: 769px) {
-  .showcase_logo {
     box-shadow: 0 0 0 500px #202020;
   }
 }
@@ -1494,6 +1475,9 @@ body {
     left: 95%;
     z-index: 2;
   }
+}
+
+@media all and (min-width: 769px) {
   .showcase_logo::after {
     content: '';
     background: #202020;
@@ -1554,50 +1538,6 @@ body {
   position: absolute;
   left: -63px;
   top: 47px;
-}
-
-.showcase_mobile-video {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 25%;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-}
-
-@media all and (min-width: 769px) {
-  .showcase_mobile-video {
-    display: none;
-  }
-}
-
-.showcase_mobile-video iframe {
-  margin: auto;
-  width: 90vw;
-}
-
-.showcase.scrolled ~ .showcase_mobile-video {
-  z-index: 4;
-}
-
-.showcase_mobile-video-bg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 1;
-}
-
-@media all and (min-width: 769px) {
-  .showcase_mobile-video-bg {
-    display: none;
-  }
-}
-
-.showcase.scrolled ~ .showcase_mobile-video-bg {
-  z-index: 3;
 }
 
 @-webkit-keyframes mouse {
@@ -2238,6 +2178,12 @@ body {
 }
 
 @media all and (min-width: 769px) {
+  .prices_slide {
+    display: contents;
+  }
+}
+
+@media all and (min-width: 769px) {
   .price {
     width: 45%;
   }
@@ -2425,6 +2371,7 @@ body {
 }
 
 .gallery_info-text {
+  display: none;
   background: #1c1c1c;
   padding: 30px 30px 30px;
   position: relative;
@@ -2432,6 +2379,7 @@ body {
 
 @media all and (min-width: 769px) {
   .gallery_info-text {
+    display: block;
     padding: 10px 30px 1px;
   }
 }
@@ -2682,7 +2630,6 @@ body {
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
 .owl-carousel {
-  display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
@@ -2909,4 +2856,22 @@ body {
 .owl-prev.owl-disabled:before,
 .owl-next.owl-disabled:before {
   opacity: 0.25;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dot span {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #dbdbdb;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: .2s ease-in-out background;
+}
+
+.owl-dot.active span {
+  background: #fff;
 }

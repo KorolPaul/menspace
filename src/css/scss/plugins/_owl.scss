@@ -4,7 +4,6 @@
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
 .owl-carousel {
-    display: none;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
     /* position relative and z-index fix webkit rendering fonts issue */
@@ -194,4 +193,20 @@
 .owl-prev.owl-disabled:before,
 .owl-next.owl-disabled:before {
     opacity: 0.25;
+}
+
+.owl-dots {
+    text-align: center;
+}
+.owl-dot span {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    background: $gray_color;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: .2s ease-in-out background;
+}
+.owl-dot.active span {
+    background: $color;
 }

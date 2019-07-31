@@ -122,10 +122,12 @@
         color: $bright_color;
     }
     &_info-text {
+        display: none;
         background: #1c1c1c;
         padding: 30px 30px 30px;
         position: relative;
         @include tablet {
+            display: block;
             padding: 10px 30px 1px;
         }
         @include desktop {

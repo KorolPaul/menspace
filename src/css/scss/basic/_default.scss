@@ -1,8 +1,5 @@
 html {
-    scroll-behavior: smooth;
-    @include tablet {
-        overflow: hidden;
-    }
+    overflow: hidden;
 }
 
 .sidebar-opened {

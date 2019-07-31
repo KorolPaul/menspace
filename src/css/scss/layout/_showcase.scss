@@ -1,16 +1,12 @@
 .showcase {
-    position: relative;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 3;
     overflow: hidden;
     transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
-    @include tablet {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
 
     .scaled & {
         @include tablet {
@@ -59,33 +55,6 @@
         .showcase.scrolled & {
             transform: translateY(-100%);
         }
-
-        //&::before {
-        //    content: '';
-        //    position: absolute;
-        //    top: 0;
-        //    right: 0;
-        //    width: 220px;
-        //    height: 90px;
-        //    background: url(#{$img}/pluses-bg.png) 100% 0 no-repeat;
-        //    background-size: 100% auto;
-        //    @include tablet {
-        //        display: none;
-        //    }
-        //}
-        //&::after {
-        //    content: '';
-        //    position: absolute;
-        //    bottom: 0;
-        //    left: 0;
-        //    width: 165px;
-        //    height: 212px;
-        //    background: url(#{$img}/lines-bg.png) 0 100% no-repeat;
-        //    background-size: 100% auto;
-        //    @include tablet {
-        //        display: none;
-        //    }
-        //}
     }
     &_logo {
         display: none;
@@ -100,11 +69,11 @@
             transform-origin: center center;
             transform: translate(-50%, -50%);
             z-index: 3;
-            @include tablet {
-                box-shadow: 0 0 0 500px $dark_color;
-            }
+            box-shadow: 0 0 0 500px $dark_color;
+        }
 
-            &::before {
+        &::before {
+            @include tablet {
                 content: '';
                 background: $dark_color /*url(#{$img}/pluses-bg.png) 0 30% no-repeat*/;
                 position: absolute;
@@ -114,7 +83,9 @@
                 left: 95%;
                 z-index: 2;
             }
-            &::after {
+        }
+        &::after {
+            @include tablet {
                 content: '';
                 background: $dark_color /*url(#{$img}/lines-bg.png) 100% 100% no-repeat*/;
                 position: absolute;
@@ -169,42 +140,42 @@
         top: 47px;
     }
 
-    &_mobile-video {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 25%;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        @include tablet {
-            display: none;
-        }
-
-        iframe {
-            margin: auto;
-            width: 90vw;
-        }
-
-        .showcase.scrolled ~ & {
-            z-index: 4;
-        }
-    }
-    &_mobile-video-bg {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 1;
-        @include tablet {
-            display: none;
-        }
-
-        .showcase.scrolled ~ & {
-            z-index: 3;
-        }
-    }
+    //&_mobile-video {
+    //    position: absolute;
+    //    left: 0;
+    //    right: 0;
+    //    top: 25%;
+    //    z-index: 2;
+    //    display: flex;
+    //    justify-content: center;
+    //    @include tablet {
+    //        display: none;
+    //    }
+//
+    //    iframe {
+    //        margin: auto;
+    //        width: 90vw;
+    //    }
+//
+    //    .showcase.scrolled ~ & {
+    //        z-index: 4;
+    //    }
+    //}
+    //&_mobile-video-bg {
+    //    position: absolute;
+    //    left: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    top: 0;
+    //    z-index: 1;
+    //    @include tablet {
+    //        display: none;
+    //    }
+//
+    //    .showcase.scrolled ~ & {
+    //        z-index: 3;
+    //    }
+    //}
 }
 
 @keyframes mouse {
