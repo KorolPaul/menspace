@@ -1383,15 +1383,16 @@ body {
   transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
 }
 
-@media all and (min-width: 769px) {
-  .scaled .showcase {
-    transform: scale(30) translateY(5%);
-    opacity: 0;
-  }
+.scaled .showcase {
+  transform: scale(30) translateY(5%);
+  opacity: 0;
 }
 
 .showcase_video {
-  display: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 @media all and (min-width: 769px) {
@@ -1433,6 +1434,7 @@ body {
   bottom: 0;
   transition: .3s ease-in-out transform;
   z-index: 3;
+  background: transparent;
 }
 
 @media all and (min-width: 769px) {
@@ -1446,7 +1448,8 @@ body {
 }
 
 .showcase_logo {
-  display: none;
+  width: 100%;
+  height: 100%;
 }
 
 @media all and (min-width: 769px) {

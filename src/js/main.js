@@ -1,3 +1,5 @@
+screen.orientation.lock('portrait')
+
 $(document).ready(function () {
     var isMobile = screen.width < 769;
 
@@ -29,7 +31,7 @@ $(document).ready(function () {
         const percentX = (x / clientWidth * 100) - 50;
         const percentY = (y / clientHeight * 100) - 50;
 
-        $(this).css('transform', `rotateY(${percentX / 3}deg) rotateX(${-percentY / 20}deg)`);
+        $(this).css('transform', `rotateY(${percentX / 6}deg) rotateX(${-percentY / 20}deg)`);
     });
 
 
@@ -100,7 +102,7 @@ $(document).ready(function () {
     }
 
     /* Scroll */
-    var timeout = 1000;
+    var timeout = 1200;
     var isAninimating = false;
     var activePage = 0;
     var $pages = $('.page');
@@ -208,12 +210,14 @@ $(document).ready(function () {
     //}
 
     /* Load videos */
-    if (!isMobile) {
-        $('video source').each(function(e) {
-            $(this).attr('src', $(this).data('src'))
-        });
-        document.querySelector('video').load();
-    }
+    $('video source').each(function(e) {
+        if (!isMobile) {
+            $(this).attr('src', $(this).data('src'));
+        } else {
+            $(this).attr('src', $(this).data('src-mobile'));
+        }
+    });
+    document.querySelector('video').load();
 
     /* Popup */
     var $popup = $('.popup');

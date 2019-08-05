@@ -9,14 +9,16 @@
     transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
 
     .scaled & {
-        @include tablet {
+        //@include tablet {
             transform: scale(30) translateY(5%);
             opacity: 0;
-        }
+        //}
     }
     
     &_video {
-        display: none;
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;        
         @include tablet {
             display: block;
             object-fit: cover;
@@ -48,6 +50,8 @@
         bottom: 0;
         transition: .3s ease-in-out transform;
         z-index: 3;
+        background: transparent;
+
         @include tablet {
             background: transparent;
         }
@@ -57,12 +61,12 @@
         }
     }
     &_logo {
-        display: none;
+        width: 100%;
+        height: 100%;
         @include tablet {
             display: flex;
             justify-content: center;
             position: absolute;
-            //width: 65vw;
             height: 106vh;
             top: 50%;
             left: 50%;
