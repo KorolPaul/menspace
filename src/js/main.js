@@ -1,7 +1,13 @@
 screen.orientation.lock('portrait')
 
+window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
+    alert(errorMsg);
+    alert(url);
+    alert(lineNumber);
+}
+
 $(document).ready(function () {
-    var isMobile = screen.width < 769;
+    var isMobile = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
     /* Menu toggle */
     const $sidebar = $('.sidebar');

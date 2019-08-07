@@ -52,10 +52,6 @@
         z-index: 3;
         background: transparent;
 
-        @include tablet {
-            background: transparent;
-        }
-
         .showcase.scrolled & {
             transform: translateY(-100%);
         }
@@ -70,6 +66,7 @@
             height: 106vh;
             top: 50%;
             left: 50%;
+            width: auto;
             transform-origin: center center;
             transform: translate(-50%, -50%);
             z-index: 3;
