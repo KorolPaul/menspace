@@ -1,4 +1,4 @@
-screen.orientation.lock('portrait')
+//screen.orientation.lock('portrait')
 
 window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
     alert(errorMsg);
