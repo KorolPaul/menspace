@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('img-resize', function() {
-    return gulp.src('src/img/slides/*')
+    return gulp.src('src/img/slider/*')
         .pipe(imageResize({
             width : 320,
             height : 180,
