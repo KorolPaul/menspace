@@ -3,9 +3,14 @@ body {
     perspective-origin: 50% 50%;
 }
 
+.pages-container {
+    overflow: hidden;
+    height: 100%;
+}
+
 .page {
     box-sizing: border-box;
-    min-height: 100vh;
+    height: 100vh;
     position: absolute;
     left: 0;
     right: 0;

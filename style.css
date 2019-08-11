@@ -347,8 +347,11 @@ template {
   font-style: normal;
 }
 
-html {
+html,
+body {
   overflow: hidden;
+  height: 100%;
+  position: relative;
 }
 
 .sidebar-opened {
@@ -364,7 +367,6 @@ body {
 @media all and (min-width: 769px) {
   body {
     background-size: 100% auto;
-    height: 100vh;
   }
 }
 
@@ -1169,9 +1171,14 @@ body {
   perspective-origin: 50% 50%;
 }
 
+.pages-container {
+  overflow: hidden;
+  height: 100%;
+}
+
 .page {
   box-sizing: border-box;
-  min-height: 100vh;
+  height: 100vh;
   position: absolute;
   left: 0;
   right: 0;

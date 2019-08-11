@@ -1,5 +1,8 @@
-html {
+html,
+body {
     overflow: hidden;
+    height: 100%;
+    position: relative;
 }
 
 .sidebar-opened {
@@ -12,7 +15,6 @@ body {
     font: 200 #{$font-size} $font-family;
     @include tablet {
         background-size: 100% auto;
-        height: 100vh;
     }
 }
 
