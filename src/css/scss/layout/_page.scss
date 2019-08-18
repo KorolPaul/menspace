@@ -108,6 +108,12 @@ body {
             align-items: flex-end;
         }
     }
+    &__partners {
+        text-align: center;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+    }
     &__contacts {
         padding-top: 140px;
         @include tablet {

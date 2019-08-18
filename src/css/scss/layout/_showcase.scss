@@ -10,7 +10,7 @@
 
     .scaled & {
         //@include tablet {
-            transform: scale(30) translateY(5%);
+            transform: scale(30);
             opacity: 0;
         //}
     }

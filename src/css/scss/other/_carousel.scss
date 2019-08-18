@@ -1,0 +1,21 @@
+.carousel {
+    position: relative;
+    padding: 10vh 0;
+    &_item {
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        padding: 0 20px;
+        height: 100%;
+    }
+    &_image {
+        @include tablet {
+            filter: grayscale(1);
+            transition: .2s ease-in-out filter;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}

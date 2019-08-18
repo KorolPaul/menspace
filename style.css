@@ -1314,6 +1314,10 @@ body {
   }
 }
 
+.page__partners {
+  text-align: center;
+}
+
 .page__contacts {
   padding-top: 140px;
 }
@@ -1391,7 +1395,7 @@ body {
 }
 
 .scaled .showcase {
-  transform: scale(30) translateY(5%);
+  transform: scale(30);
   opacity: 0;
 }
 
@@ -2499,6 +2503,32 @@ body {
   right: 0;
 }
 
+.carousel {
+  position: relative;
+  padding: 10vh 0;
+}
+
+.carousel_item {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+@media all and (min-width: 769px) {
+  .carousel_image {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: .2s ease-in-out filter;
+  }
+}
+
+.carousel_image:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
 /*Plugins*/
 /* Slider */
 .slick-slider {
@@ -2645,6 +2675,7 @@ body {
 .owl-carousel .owl-stage {
   position: relative;
   touch-action: manipulation;
+  display: flex;
   -moz-backface-visibility: hidden;
   /* fix firefox animation glitch */
 }
@@ -2707,7 +2738,6 @@ body {
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel button.owl-dot {
-  background: none;
   color: inherit;
   border: none;
   padding: 0 !important;
@@ -2829,7 +2859,6 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
-  background: transparent;
 }
 
 @media all and (min-width: 769px) {
@@ -2844,10 +2873,42 @@ body {
   background-size: 7px auto;
 }
 
+.carousel .owl-prev {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform: translate(0, -50%);
+  height: 60px;
+  width: 60px;
+  background-size: auto 100%;
+  transition: .2s ease-in-out filter;
+}
+
+.carousel .owl-prev:hover {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
 .owl-next {
   background: url(src/img/next.svg) no-repeat right center;
   background-size: 7px auto;
   border-left: 1px solid #333333;
+}
+
+.carousel .owl-next {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translate(0, -50%);
+  height: 60px;
+  width: 60px;
+  background-size: auto 100%;
+  transition: .2s ease-in-out filter;
+}
+
+.carousel .owl-next:hover {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .owl-prev:hover,

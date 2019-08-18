@@ -1,11 +1,5 @@
 //screen.orientation.lock('portrait')
 
-window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
-    alert(errorMsg);
-    alert(url);
-    alert(lineNumber);
-}
-
 $(document).ready(function () {
     var isMobile = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
@@ -173,8 +167,11 @@ $(document).ready(function () {
             case '#gallery':
                 activePage = 4;
                 break;
-            case '#contact':
+            case '#partners':
                 activePage = 5;
+                break;
+            case '#contact':
+                activePage = 6;
                 break;
             default:
                 activePage = 0;
@@ -214,6 +211,17 @@ $(document).ready(function () {
     //        };
     //    });
     //}
+
+    /* Partners */
+    $('.carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        items: 2,
+        autoWidth: true,
+        navText: ['',''],
+    });
 
     /* Load videos */
     $('video source').each(function(e) {
