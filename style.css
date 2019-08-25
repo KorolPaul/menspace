@@ -1316,6 +1316,11 @@ body {
 
 .page__partners {
   text-align: center;
+  background: url(src/img/partners-bg.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page__contacts {
@@ -2047,6 +2052,10 @@ body {
   }
 }
 
+.services {
+  width: 100%;
+}
+
 @media all and (min-height: 980px) {
   .services {
     width: 690px;
@@ -2505,7 +2514,6 @@ body {
 
 .carousel {
   position: relative;
-  padding: 10vh 0;
 }
 
 .carousel_item {
@@ -2527,6 +2535,11 @@ body {
 .carousel_image:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
+}
+
+.carousel__partners .carousel_image {
+  width: auto !important;
+  margin: auto;
 }
 
 /*Plugins*/
@@ -2876,12 +2889,18 @@ body {
 .carousel .owl-prev {
   position: absolute;
   top: 50%;
-  left: -50px;
+  left: 10px;
   transform: translate(0, -50%);
   height: 60px;
   width: 60px;
   background-size: auto 100%;
   transition: .2s ease-in-out filter;
+}
+
+@media all and (min-width: 1025px) {
+  .carousel .owl-prev {
+    left: -50px;
+  }
 }
 
 .carousel .owl-prev:hover {
@@ -2898,12 +2917,18 @@ body {
 .carousel .owl-next {
   position: absolute;
   top: 50%;
-  right: -50px;
+  right: 10px;
   transform: translate(0, -50%);
   height: 60px;
   width: 60px;
   background-size: auto 100%;
   transition: .2s ease-in-out filter;
+}
+
+@media all and (min-width: 1025px) {
+  .carousel .owl-next {
+    right: -50px;
+  }
 }
 
 .carousel .owl-next:hover {

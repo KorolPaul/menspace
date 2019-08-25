@@ -1,6 +1,6 @@
 .carousel {
     position: relative;
-    padding: 10vh 0;
+
     &_item {
         display: flex;
         align-self: stretch;
@@ -16,6 +16,11 @@
 
         &:hover {
             filter: grayscale(0);
+        }
+
+        .carousel__partners & {
+            width: auto !important;
+            margin: auto;
         }
     }
 }

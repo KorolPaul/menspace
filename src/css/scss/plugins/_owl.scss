@@ -179,12 +179,15 @@
     .carousel & {
         position: absolute;
         top: 50%;
-        left: -50px;
+        left: 10px;
         transform: translate(0, -50%);
         height: 60px;
         width: 60px;
         background-size: auto 100%;
         transition: .2s ease-in-out filter;
+        @include desktop {
+            left: -50px;
+        }
 
         &:hover {
             filter: grayscale(1);
@@ -199,12 +202,15 @@
     .carousel & {
         position: absolute;
         top: 50%;
-        right:  -50px;
+        right: 10px;
         transform: translate(0, -50%);
         height: 60px;
         width: 60px;
         background-size: auto 100%;
         transition: .2s ease-in-out filter;
+        @include desktop {
+            right: -50px;
+        }
 
         &:hover {
             filter: grayscale(1);

@@ -22,7 +22,7 @@
         <div class="menu-toggle_line"></div>
         <div class="menu-toggle_line"></div>
         <div class="menu-toggle_line"></div>
-        menu
+        <span class="loc" data-word="menu">menu</span>
     </button>
     <div class="sidebar">
         <button class="sidebar_close js-menu-toggle">
@@ -30,18 +30,32 @@
         </button>
         <div class="sidebar_column">
             <div class="lang">
-                <a href="/en" class="lang_item active">en</a>
-                <a href="/ru" class="lang_item">ru</a>
-                <a href="/pt" class="lang_item">pt</a>
+                <a href="en" class="lang_item">en</a>
+                <a href="ru" class="lang_item">ru</a>
+                <a href="pt" class="lang_item">pt</a>
             </div>
             <nav class="menu">
-                <a href="#main" class="menu_link">HOME</a>
-                <a href="#about" class="menu_link">ABOUT US</a>
-                <a href="#services" class="menu_link">SERVICES</a>
-                <a href="#price-lists" class="menu_link">PRICE LISTS</a>
-                <a href="#gallery" class="menu_link">gallery</a>
-                <a href="#partners" class="menu_link">partners</a>
-                <a href="#contact" class="menu_link">contact</a>
+                <a href="#main" class="menu_link">
+                    <span class="loc" data-word="home">HOME</span>
+                </a>
+                <a href="#about" class="menu_link">
+                    <span class="loc" data-word="aboutUs">ABOUT US</span>
+                </a>
+                <a href="#services" class="menu_link">
+                    <span class="loc" data-word="services">SERVICES</span>
+                </a>
+                <a href="#price-lists" class="menu_link">
+                    <span class="loc" data-word="priceList">PRICE LISTS</span>
+                </a>
+                <a href="#gallery" class="menu_link">
+                    <span class="loc" data-word="gallery">gallery</span>
+                </a>
+                <a href="#partners" class="menu_link">
+                    <span class="loc" data-word="partners">partners</span>
+                </a>
+                <a href="#contact" class="menu_link">
+                    <span class="loc" data-word="contact">contact</span>
+                </a>
             </nav>
         </div>
         <div class="sidebar_column">
@@ -50,12 +64,14 @@
                     +351 123456789
                 </p>
                 <p class="contacts_time">
-                    Monday to Saturday
-                    09:00 to 21:00
+                    <span class="loc" data-word="opening1">Monday to Saturday</span>
+                    <span class="loc" data-word="opening2">09:00 to 21:00</span>
                 </p>
             </div>
             <div class="social">
-                <p class="social_title">FOLLOW US</p>
+                <p class="social_title">
+                    <span class="loc" data-word="followUs">FOLLOW US</span>
+                </p>
                 <a href="#" class="social_link social_link__fb">facebook</a>
                 <a href="#" class="social_link social_link__instagram">instagram</a>
                 <a href="#" class="social_link social_link__youtube">youtube</a>
@@ -70,7 +86,8 @@
         <div class="appointment">
             <a href="/google" class="appointment_button">E</a>
             <p class="appointment_title">
-                MAKE AN <span class="bright">APPOINTMENT</span>
+                <span class="loc" data-word="apointment1">MAKE AN</span>
+                <span class="bright"><span class="loc" data-word="apointment2">APPOINTMENT</span></span>
             </p>
         </div>
     </header>
@@ -96,18 +113,25 @@
                 </div>
             </div>
             <video class="showcase_video" autoplay loop muted >
-                <source data-src="src/img/video.mp4" data-src-mobile="src/img/video-mobile.mp4" type="video/mp4">
-                <source data-src="src/img/video.webm" data-src-mobile="src/img/video-mobile.webm" type="video/webm">
+                <source data-src="src/img/video.mp4" src="src/img/video-mobile.mp4" type="video/mp4">
+                <source data-src="src/img/video.webm" src="src/img/video-mobile.webm" type="video/webm">
             </video>
         </div>
         <div class="page page__about">
             <article class="about">
-                <h1 class="title title__shaver">ABOUT <span class="bright">US</span></h1>
+                <h1 class="title title__shaver">
+                    <span class="loc" data-word="about.title1">ABOUT</span>
+                    <span class="bright"><span class="loc" data-word="about.title2">US</span></span>
+                </h1>
                 <div class="about_content">
-                    <h2><strong>Предлагаем духмяный односолодовый и вперед!</strong></h2>
-                    <p>В нашем салоне мастера стремятся к изящному результату, чистые линии превыше всего, а соотношение форм изучается с математической точностью.
-                            Мы не барбер шоп. Мы не играем в ретро, но используем элементы классической берберской эстетики для создания правильной атмосферы. </p>
-                    <p>Мы угощаем. В нашем баре есть такие напитки как: старый добрый Джек, Дэниелс конечно, Мистер Башмил и Мистер Глэнливет, дедушка Портвейн…а вообще заходите к нам в гости, кто знает кого вы еще встретите! (Обычный шрифт)</p>
+                    <h2>
+                        <strong><span class="loc" data-word="about.subtitle">Предлагаем духмяный односолодовый и вперед!</span></strong>
+                    </h2>
+                    <p>
+                        <span class="loc" data-word="about.text1">В нашем салоне мастера стремятся к изящному результату, чистые линии превыше всего, а соотношение форм изучается с математической точностью. Мы не барбер шоп. Мы не играем в ретро, но используем элементы классической берберской эстетики для создания правильной атмосферы.</span></p>
+                    <p>
+                        <span class="loc" data-word="about.text2">Мы угощаем. В нашем баре есть такие напитки как: старый добрый Джек, Дэниелс конечно, Мистер Башмил и Мистер Глэнливет, дедушка Портвейн…а вообще заходите к нам в гости, кто знает кого вы еще встретите! (Обычный шрифт)</span>
+                    </p>
                 </div>
             </article>
         </div>
@@ -119,10 +143,14 @@
                 <div class="services_list owl-carousel">
                     <div class="service">
                         <h3 class="service_title">
-                            <span class="service_title-text">haircut</span>
+                            <span class="service_title-text">
+                                <span class="loc" data-word="servs.0.service1.title">haircut</span>
+                            </span>
                         </h3>
                         <div class="service_content">
-                            <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
+                            <p>
+                                <span class="loc" data-word="servs.0.service1.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
+                            </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
                             <div class="service_video">
                                 <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -131,10 +159,14 @@
                     </div>
                     <div class="service">
                         <h3 class="service_title">
-                            <span class="service_title-text">shaving</span>
+                            <span class="service_title-text">
+                                <span class="loc" data-word="servs.1.service2.title">haircut</span>
+                            </span>
                         </h3>
                         <div class="service_content">
-                            <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
+                            <p>
+                                <span class="loc" data-word="servs.1.service2.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
+                            </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
                             <div class="service_video">
                                 <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -143,10 +175,14 @@
                     </div>
                     <div class="service">
                         <h3 class="service_title">
-                            <span class="service_title-text">trimming</span>
+                            <span class="service_title-text">
+                                <span class="loc" data-word="servs.2.service3.title">haircut</span>
+                            </span>
                         </h3>
                         <div class="service_content">
-                            <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
+                            <p>
+                                <span class="loc" data-word="servs.2.service3.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
+                            </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
                             <div class="service_video">
                                 <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -155,10 +191,14 @@
                     </div>
                     <div class="service">
                         <h3 class="service_title">
-                            <span class="service_title-text">styling</span>
+                            <span class="service_title-text">
+                                <span class="loc" data-word="servs.3.service4.title">haircut</span>
+                            </span>
                         </h3>
                         <div class="service_content">
-                            <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. </p>
+                            <p>
+                                <span class="loc" data-word="servs.3.service4.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
+                            </p>
                             <a href="#" class="service_button">WATCH THE VIDEO</a>
                             <div class="service_video">
                                 <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -175,105 +215,181 @@
                     <div class="prices_slide">
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.0.price1.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.0.price1.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup1.prcs.0.price1.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.1.price2.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.1.price2.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup1.prcs.1.price2.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.2.price3.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.2.price3.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        </div>
-                    </div>
-                    <div class="prices_slide">
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
-                                <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
-                                <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
-                                <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup1.prcs.2.price3.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                     </div>
                     <div class="prices_slide">
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.3.price4.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup1.prcs.3.price4.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup1.prcs.3.price4.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.0.price1.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.0.price1.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup2.prcs.0.price1.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.1.price2.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.1.price2.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup2.prcs.1.price2.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                     </div>
                     <div class="prices_slide">
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.2.price3.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.2.price3.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup2.prcs.2.price3.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.3.price4.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup2.prcs.3.price4.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup2.prcs.3.price4.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                         <div class="price">
                             <div class="price_header">
-                                <span class="price_title">Classic haircut</span>
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.0.price1.title">Classic haircut</span>
+                                </span>
                                 <div class="price_space"></div>
-                                <span class="price_value">20.00€</span>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.0.price1.price">20.00€</span>
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup3.prcs.0.price1.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="prices_slide">
+                        <div class="price">
+                            <div class="price_header">
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.1.price2.title">Classic haircut</span>
+                                </span>
+                                <div class="price_space"></div>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.1.price2.price">20.00€</span>
+                                </span>
+                            </div>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup3.prcs.1.price2.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="prices_slide">
+                        <div class="price">
+                            <div class="price_header">
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.2.price3.title">Classic haircut</span>
+                                </span>
+                                <div class="price_space"></div>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.2.price3.price">20.00€</span>
+                                </span>
+                            </div>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup3.prcs.2.price3.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="prices_slide">
+                        <div class="price">
+                            <div class="price_header">
+                                <span class="price_title">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.3.price4.title">Classic haircut</span>
+                                </span>
+                                <div class="price_space"></div>
+                                <span class="price_value">
+                                    <span class="loc" data-word="prices.priceGroup3.prcs.3.price4.price">20.00€</span>
+                                </span>
+                            </div>
+                            <p>
+                                <span class="loc" data-word="prices.priceGroup3.prcs.3.price4.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -305,20 +421,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-1.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.0.image1.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.0.image1.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.0.image1.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="02" data-src="src/img/slider/slider-2.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-2.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.1.image2.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.1.image2.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.1.image2.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -327,20 +455,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-3.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                            <p class="gallery_info-title">
+                                                <span class="loc" data-word="gall.2.image3.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                            </p>
+                                            <p class="gallery_info-date">
+                                                <span class="loc" data-word="gall.2.image3.date">10/05/2018</span>
+                                            </p>
+                                        </div>
+                                        <p>
+                                            <span class="loc" data-word="gall.2.image3.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
-                                </div>
                             </div>
                             <div class="slider_item" data-number="04" data-src="src/img/slider/slider-4.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-4.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.3.image4.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.3.image4.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.3.image4.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -349,20 +489,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-5.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.4.image5.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.4.image5.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.4.image5.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="06" data-src="src/img/slider/slider-6.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-6.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.5.image6.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.5.image6.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.5.image6.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -371,20 +523,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-7.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.6.image7.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.6.image7.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.6.image7.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="08" data-src="src/img/slider/slider-8.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-8.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.7.image8.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.7.image8.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.7.image8.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -393,20 +557,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-9.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.8.image9.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.8.image9.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.8.image9.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="10" data-src="src/img/slider/slider-10.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-10.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.9.image10.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.9.image10.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.9.image10.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -415,20 +591,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-11.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.10.image11.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.10.image11.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.10.image11.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="12" data-src="src/img/slider/slider-12.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-12.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.11.image12.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.11.image12.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.11.image12.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -437,20 +625,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-13.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.12.image13.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.12.image13.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.12.image13.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="14" data-src="src/img/slider/slider-14.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-14.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.13.image14.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.13.image14.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.13.image14.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -459,20 +659,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-15.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.14.image15.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.14.image15.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.14.image15.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="16" data-src="src/img/slider/slider-16.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-16.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.15.image16.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.15.image16.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.15.image16.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -481,20 +693,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-17.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.16.image17.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.16.image17.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.16.image17.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="18" data-src="src/img/slider/slider-18.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-18.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.17.image18.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.17.image18.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.17.image18.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -503,20 +727,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-19.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.18.image19.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.18.image19.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.18.image19.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="20" data-src="src/img/slider/slider-20.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-20.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.19.image20.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.19.image20.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.19.image20.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -525,20 +761,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-21.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.20.image21.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.20.image21.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.20.image21.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="22" data-src="src/img/slider/slider-22.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-22.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.21.image22.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.21.image22.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.21.image22.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -547,20 +795,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-23.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.22.image23.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.22.image23.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.22.image23.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="24" data-src="src/img/slider/slider-24.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-24.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.23.image24.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.23.image24.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.23.image24.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -569,20 +829,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-25.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.24.image25.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.24.image25.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.24.image25.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="26" data-src="src/img/slider/slider-26.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-26.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.25.image26.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.25.image26.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.25.image26.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -591,20 +863,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-27.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.26.image27.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.26.image27.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.26.image27.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="28" data-src="src/img/slider/slider-28.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-28.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.27.image28.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.27.image28.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.27.image28.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -613,20 +897,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-29.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.28.image29.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.28.image29.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.28.image29.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="30" data-src="src/img/slider/slider-30.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-30.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.29.image30.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.29.image30.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.29.image30.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -635,20 +931,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-31.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.30.image31.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.30.image31.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.30.image31.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="32" data-src="src/img/slider/slider-32.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-32.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.31.image32.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.31.image32.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.31.image32.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -657,20 +965,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-33.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.32.image33.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.32.image33.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.32.image33.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="34" data-src="src/img/slider/slider-34.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-34.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.33.image34.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.33.image34.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.33.image34.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -679,20 +999,32 @@
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-35.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.34.image35.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.34.image35.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.34.image35.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                             <div class="slider_item" data-number="36" data-src="src/img/slider/slider-36.jpg">
                                 <img  class="slider_image" src="src/img/slider/thumbs/slider-36.jpg" alt="">
                                 <div class="slider_item-meta">
                                     <div class="gallery_info-meta">
-                                        <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                        <p class="gallery_info-date">10/05/2018</p>
+                                        <p class="gallery_info-title">
+                                            <span class="loc" data-word="gall.35.image36.title"><strong>cuts and whiskey</strong> inauguration party</span>
+                                        </p>
+                                        <p class="gallery_info-date">
+                                            <span class="loc" data-word="gall.35.image36.date">10/05/2018</span>
+                                        </p>
                                     </div>
-                                    <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
+                                    <p>
+                                        <span class="loc" data-word="gall.35.image36.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -713,37 +1045,44 @@
             </div>
         </div>
         <div class="page page__partners owl-carousel">
-            <div>
-                <h1>
-                    OUR <span class="bright">PARTNERS</span>
-                </h1>
-                <div class="carousel">
-                    <a href="#" class="carousel_item">
-                        <img src="src/img/partners/BangOlufsen_2017Logo_Black.png" alt="" class="carousel_image">
-                    </a>
-                    <a href="#" class="carousel_item">
-                        <img src="src/img/partners/ZCup-PT-logo-120x120.png" alt="" class="carousel_image">
-                    </a>
-                    <a href="#" class="carousel_item">
-                        <img src="src/img/partners/logo-konzept-preto.png" alt="" class="carousel_image">
-                    </a>
-                    <a href="#" class="carousel_item">
-                        <img src="src/img/partners/logo-rodape.png" alt="" class="carousel_image">
-                    </a>
-                    <a href="#" class="carousel_item">
-                        <img src="src/img/partners/logo.png" alt="" class="carousel_image">
-                    </a>
-                </div>
+            <h1>
+                <span class="loc" data-word="parts.title1">OUR</span>
+                <span class="bright">
+                    <span class="loc" data-word="parts.title2">PARTNERS</span>
+                </span>
+            </h1>
+            <div class="carousel carousel__partners">
+                <a href="#" class="carousel_item">
+                    <img src="src/img/partners/BangOlufsen_2017Logo_Black.png" alt="" class="carousel_image">
+                </a>
+                <a href="#" class="carousel_item">
+                    <img src="src/img/partners/ZCup-PT-logo-120x120.png" alt="" class="carousel_image">
+                </a>
+                <a href="#" class="carousel_item">
+                    <img src="src/img/partners/logo-konzept-preto.png" alt="" class="carousel_image">
+                </a>
+                <a href="#" class="carousel_item">
+                    <img src="src/img/partners/logo-rodape.png" alt="" class="carousel_image">
+                </a>
+                <a href="#" class="carousel_item">
+                    <img src="src/img/partners/logo.png" alt="" class="carousel_image">
+                </a>
             </div>
         </div>
         <div class="page page__contacts">
             <div class="widget">
                 <div class="widget_navigation">
-                    <button class="widget_navigation-button active" data-tab="1">contact info</button>
-                    <button class="widget_navigation-button" data-tab="2">get in touch</button>
+                    <button class="widget_navigation-button active" data-tab="1">
+                        <span class="loc" data-word="conts.title1">contact </span> <span class="loc" data-word="conts.title2">info</span>
+                    </button>
+                    <button class="widget_navigation-button" data-tab="2">
+                        <span class="loc" data-word="conts.getintouch">get in touch</span>
+                        
+                    </button>
                 </div>
                 <h1 class="title title__small title__scissors">
-                    Contact <span class="bright">info</span>
+                    <span class="loc" data-word="conts.title1">Contact </span>
+                    <span class="bright"><span class="loc" data-word="conts.title2">info</span></span>
                 </h1>
                 <div class="widget_tab active" data-tab="1">
                     <div class="contacts">
@@ -763,7 +1102,9 @@
                         </p>
                     </div>
                     <div class="social">
-                        <p class="social_title">FOLLOW US</p>
+                        <p class="social_title">
+                            <span class="loc" data-word="followUs">FOLLOW US</span>
+                        </p>
                         <a href="#" class="social_link social_link__fb">facebook</a>
                         <a href="#" class="social_link social_link__instagram">instagram</a>
                         <a href="#" class="social_link social_link__youtube">youtube</a>
@@ -823,8 +1164,12 @@
                     </a>
                 </div>
                 <div class="footer_menu">
-                    <a href="#" class="footer_menu-link">Terms of Use</a>
-                    <a href="#" class="footer_menu-link">Privacy policy</a>
+                    <a href="#" class="footer_menu-link">
+                        <span class="loc" data-word="terms">Terms of Use</span>
+                    </a>
+                    <a href="#" class="footer_menu-link">
+                        <span class="loc" data-word="privacy">Privacy policy</span>
+                    </a>
                 </div>
             </footer>
         </div>

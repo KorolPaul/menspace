@@ -110,9 +110,11 @@ body {
     }
     &__partners {
         text-align: center;
-        //display: flex;
-        //justify-content: center;
-        //align-items: center;
+        background: url(#{$img}/partners-bg.jpg) no-repeat center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     &__contacts {
         padding-top: 140px;

@@ -213,22 +213,31 @@ $(document).ready(function () {
     //}
 
     /* Partners */
-    $('.carousel').owlCarousel({
+    $('.carousel__partners').owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
         dots: false,
-        items: 2,
-        autoWidth: true,
+        items: 1,
+        //autoWidth: true,
         navText: ['',''],
+        responsive : {
+            768 : {
+                items: 2,
+            },
+            1024 : {
+                items: 3,
+            },
+            1400 : {
+                items: 4,
+            }
+        }
     });
 
     /* Load videos */
     $('video source').each(function(e) {
         if (!isMobile) {
             $(this).attr('src', $(this).data('src'));
-        } else {
-            $(this).attr('src', $(this).data('src-mobile'));
         }
     });
     document.querySelector('video').load();
@@ -250,5 +259,49 @@ $(document).ready(function () {
     });
 
     $('.fade').on('click', togglePopup);
+
+    /* Translations */
+    function loadTranslation() {
+        const lang = localStorage.lang || 'en';
+        $('.lang_item[href="'+ lang +'"]').addClass('active');
+        
+        fetch('translations.json')
+            .then(responce => {
+                return responce.json();
+            })
+            .then(data => {
+                $('.loc').each((i, el) => {
+                    const word = el.dataset.word.split('.');
+                    
+
+                    if (word.length === 1) {
+                        el.innerHTML = data[lang][word[0]];
+                    } else if (word.length === 2) {
+                        el.innerHTML = data[lang][word[0]][word[1]];
+                    } else if (word.length === 3) {
+                        el.innerHTML = data[lang][word[0]][word[1]][word[2]];
+                    } else if (word.length === 4) {
+                        el.innerHTML = data[lang][word[0]][parseInt(word[1])][word[2]][word[3]];
+                    } else if (word.length === 6) {
+                        el.innerHTML = data[lang][word[0]][word[1]][word[2]][parseInt(word[3])][word[4]][word[5]];
+                    }
+                })
+            });
+    }
+
+    loadTranslation();
+
+    $('.lang_item').on('click', function(e) {
+        e.preventDefault();
+
+        if (!$(this).hasClass('active')) {
+            const lang = $(this).attr('href');
+    
+            $('.lang_item').removeClass('active');
+            $(this).addClass('active');
+            localStorage.lang = lang;
+            loadTranslation();
+        }
+    });
 
 });
