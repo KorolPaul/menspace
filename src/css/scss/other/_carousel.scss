@@ -10,7 +10,7 @@
     }
     &_image {
         @include tablet {
-            filter: grayscale(1);
+            filter: grayscale(1)  brightness(.8);
             transition: .2s ease-in-out filter;
         }
 
