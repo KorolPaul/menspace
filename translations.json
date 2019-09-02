@@ -16,9 +16,10 @@
         "about":{
             "title1":"ABOUT",
             "title2":"US",
-            "subtitle":"",
-            "text1":"",
-            "text2":""
+            "subtitle":"Oferecemos corte único,perfumado e do seu agrado.",
+            "text1":"No nosso salão, os mestres buscam um resultado elegante, as linhas certas estão acima de tudo e a proporção de formas é estudada com precisão matemática.
+Nós não somos uma barbearia. Não tocamos no rétro, mas usamos elementos da estética clássica de barbeiro para criar a atmosfera certa.",
+            "text2":"Nós oferecemos.  No nosso bar existem bebidas como: O bom e velho Jack, Daniels, é claro, o Sr. Bashmil e o Sr. Glenlivet, avô de Porto ... mas, em geral, venha nos visitar, quem sabe quem mais você encontrará!"
         },
         "servs":[
             {
@@ -147,7 +148,7 @@
                             "subtitle":"",
                             "price":"25€"
                         }
-                    }                    
+                    }
                 ]
             }
         },
@@ -477,9 +478,10 @@
         "about":{
             "title1":"SOBRE",
             "title2":"NÓS",
-            "subtitle":"",
-            "text1":"",
-            "text2":""
+            "subtitle":"Oferecemos corte único,perfumado e do seu agrado.",
+            "text1":"No nosso salão, os mestres buscam um resultado elegante, as linhas certas estão acima de tudo e a proporção de formas é estudada com precisão matemática.
+Nós não somos uma barbearia. Não tocamos no rétro, mas usamos elementos da estética clássica de barbeiro para criar a atmosfera certa.",
+            "text2":"Nós oferecemos.  No nosso bar existem bebidas como: O bom e velho Jack, Daniels, é claro, o Sr. Bashmil e o Sr. Glenlivet, avô de Porto ... mas, em geral, venha nos visitar, quem sabe quem mais você encontrará!"
         },
         "servs":[
             {
@@ -938,35 +940,36 @@
         "about":{
             "title1":"О",
             "title2":"НАС",
-            "subtitle":"",
-            "text1":"",
-            "text2":""
+            "subtitle":"Предлагаем духмяный односолодовый и вперед!",
+            "text1":"В нашем салоне мастера стремятся к изящному результату, чистые линии превыше всего, а соотношение форм изучается с математической точностью.
+Мы не барбер шоп. Мы не играем в ретро, но используем элементы классической берберской эстетики для создания правильной атмосферы.",
+            "text2":"Мы угощаем. В нашем баре есть такие напитки как: старый добрый Джек, Дэниелс конечно, Мистер Башмил и Мистер Глэнливет, дедушка Портвейн…а вообще заходите к нам в гости, кто знает кого вы еще встретите!"
         },
         "servs":[
             {
                 "service1":{
-                    "title":"Haircut",
+                    "title":"Стрижка",
                     "subtitle":"",
                     "videoUrl":""
                 }
             },
             {
                 "service2":{
-                    "title":"Shaving",
+                    "title":"Стрижка бороды",
                     "subtitle":"",
                     "videoUrl":""
                 }
             },
             {
                 "service3":{
-                    "title":"Trimming",
+                    "title":"Отделка",
                     "subtitle":"",
                     "videoUrl":""
                 }
             },
             {
                 "service4":{
-                    "title":"Styling",
+                    "title":"Стайлинг",
                     "subtitle":"",
                     "videoUrl":""
                 }
@@ -974,18 +977,18 @@
         ],
         "prices":{
             "priceGroup1":{
-                "title":"Haircuts",
+                "title":"Стрижки",
                 "prcs":[
                     {
                         "price1":{
-                            "title":"Haircut normal",
+                            "title":"Стрижка",
                             "subtitle":"",
                             "price":"25€"
                         }
                     },
                     {
                         "price2":{
-                            "title":"Haircut machine",
+                            "title":"Стрижка под машинку",
                             "subtitle":"",
                             "price":"20€"
                         }
@@ -999,7 +1002,7 @@
                     },
                     {
                         "price4":{
-                            "title":"Haircut child",
+                            "title":"Детская стрижка",
                             "subtitle":"",
                             "price":"35€"
                         }
@@ -1007,7 +1010,7 @@
                 ]
             },
             "priceGroup2":{
-                "title":"Shaving",
+                "title":"Стрижки бороды",
                 "prcs":[
                     {
                         "price1":{

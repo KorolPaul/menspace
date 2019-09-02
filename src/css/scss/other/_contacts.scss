@@ -25,4 +25,11 @@
     &_email {
         background: url(#{$img}/email.svg) no-repeat 0 center;
     }
+
+    .sidebar & {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
 }

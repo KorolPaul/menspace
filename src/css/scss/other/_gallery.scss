@@ -61,6 +61,8 @@
         }
     }
     &_image {
+        position: relative;
+        z-index: 2;
         @include desktop {
             max-height: 100%;
             width: 100%;

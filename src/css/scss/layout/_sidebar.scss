@@ -6,7 +6,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: 20px 40px;
+    padding: 0 40px;
     transform: translate(-100%, 0);
     overflow: auto;
     transition: .4s ease-in-out transform;
@@ -47,13 +47,17 @@
         border: none;
         border-radius: 0;
         position: absolute;
-        top: 50px;
-        right: 50px;
+        top: 30px;
+        right: 30px;
         padding: 35px 0 0;
         font: 300 13px $font-family__heading;
         text-transform: uppercase;
         transition: .2s ease-in-out color;
         z-index: 2;
+        @include tablet {
+            top: 50px;
+            right: 50px;
+        }
 
         &::before,
         &::after  {

@@ -38,4 +38,11 @@
             background-image: url(#{$img}/social/twitter.svg);
         }
     }
+
+    .sidebar & {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
 }

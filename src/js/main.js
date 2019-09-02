@@ -45,6 +45,7 @@ $(document).ready(function () {
     $galleryCountTotal.text($('.slider_column').children().length);
 
     $sliderItems.on('click', function (e) {
+        $galleryImage.attr('src', '');
         var src = $(this).data('src');
         var $newInfo = $(this).find('.slider_item-meta').html(); 
         $galleryInfoText.html($newInfo);

@@ -9,6 +9,7 @@
         height: 100%;
     }
     &_image {
+        max-width: calc(100vw - 130px);
         @include tablet {
             filter: grayscale(1)  brightness(.8);
             transition: .2s ease-in-out filter;
