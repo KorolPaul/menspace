@@ -137,13 +137,17 @@
         animation: mouse 1.2s ease-out infinite;
     }
     &_mouse-text {
-        font: 20px $font-family__heading;
-        text-transform: uppercase;
-        transform-origin: 100% 0;
-        transform: rotate(-90deg);
-        position: absolute;
-        left: -63px;
-        top: 47px;
+        display: none;
+        @include tablet {
+            display: block;
+            font: 20px $font-family__heading;
+            text-transform: uppercase;
+            transform-origin: 100% 0;
+            transform: rotate(-90deg);
+            position: absolute;
+            left: -63px;
+            top: 47px;
+        }
     }
 
     //&_mobile-video {

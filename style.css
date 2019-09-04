@@ -424,7 +424,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +450,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -1334,6 +1334,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 150px;
+}
+
+@media all and (min-width: 769px) {
+  .page__partners {
+    padding-top: 100px;
+  }
 }
 
 .page__contacts {
@@ -1567,13 +1574,20 @@ body {
 }
 
 .showcase_mouse-text {
-  font: 20px "Oswald", sans-serif;
-  text-transform: uppercase;
-  transform-origin: 100% 0;
-  transform: rotate(-90deg);
-  position: absolute;
-  left: -63px;
-  top: 47px;
+  display: none;
+}
+
+@media all and (min-width: 769px) {
+  .showcase_mouse-text {
+    display: block;
+    font: 20px "Oswald", sans-serif;
+    text-transform: uppercase;
+    transform-origin: 100% 0;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -63px;
+    top: 47px;
+  }
 }
 
 @-webkit-keyframes mouse {
@@ -1779,14 +1793,13 @@ body {
 }
 
 .map {
-  height: 50vh;
-  width: calc(100% + 40px);
-  margin: 0 -20px;
-  overflow: hidden;
+  display: none;
 }
 
 @media all and (min-width: 769px) {
   .map {
+    display: block;
+    overflow: hidden;
     width: 40%;
     margin: 0;
   }
@@ -2127,6 +2140,12 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 0 0 0 25px;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .services_wrapper {
+    display: contents;
   }
 }
 
