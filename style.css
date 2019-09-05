@@ -424,7 +424,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +450,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -1416,12 +1416,13 @@ body {
   bottom: 0;
   z-index: 3;
   overflow: hidden;
-  transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
+  transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s, .001s z-index .3s;
 }
 
 .scaled .showcase {
   transform: scale(30);
   opacity: 0;
+  z-index: 1;
 }
 
 .showcase_video {
@@ -1429,6 +1430,8 @@ body {
   object-fit: cover;
   height: 100vh;
   width: 100vw;
+  position: relative;
+  z-index: 2;
 }
 
 @media all and (min-width: 769px) {

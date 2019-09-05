@@ -6,19 +6,22 @@
     bottom: 0;
     z-index: 3;
     overflow: hidden;
-    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
+    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s, .001s z-index .3s;
 
     .scaled & {
         //@include tablet {
             transform: scale(30);
             opacity: 0;
+            z-index: 1;
         //}
     }
     
     &_video {
         object-fit: cover;
         height: 100vh;
-        width: 100vw;        
+        width: 100vw;
+        position: relative;
+        z-index: 2;
         @include tablet {
             display: block;
             object-fit: cover;
