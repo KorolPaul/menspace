@@ -12,6 +12,7 @@
 
         display: flex;
         flex-wrap: wrap;
+        min-height: 100%;
     }
 
     &_title {
@@ -31,6 +32,7 @@
         @include desktop {
             width: 100%;
             position: relative;
+            align-self: flex-end;
         }
     }
     &_info {
@@ -51,6 +53,7 @@
     }
     &_info-content {
         @include desktop {
+            width: 100%;
             height: 100%;
         }
     }

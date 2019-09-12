@@ -191,27 +191,6 @@ $(document).ready(function () {
     hammer.on('swipe', function(e) {
         scrollPages(e, true);
     });
-    //else {
-    //    $showcase = $('.showcase');
-    //    var hammer = new Hammer(document.querySelector('.showcase_bg'));
-    //    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    //    hammer.on('swipe', function ev(e) {
-    //        if (e.deltaY < 0 ) {
-    //            $showcase.addClass('scrolled');
-    //        }
-    //    });
-    //    var hammer2 = new Hammer(document.querySelector('.showcase_mobile-video-bg'));
-    //    hammer2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    //    hammer2.on('swipe', function ev(e) {
-    //        if (e.deltaY > 0 ) {
-    //            $showcase.removeClass('scrolled');
-    //        } else {
-    //            $([document.documentElement, document.body]).animate({
-    //                scrollTop: $(".page__about").offset().top
-    //            }, 100, "linear");
-    //        };
-    //    });
-    //}
 
     /* Partners */
     $('.carousel__partners').owlCarousel({
