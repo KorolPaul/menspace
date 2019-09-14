@@ -30,8 +30,8 @@ gulp.task('sass', function () {
 gulp.task('img-resize', function() {
     return gulp.src('src/img/slider/*')
         .pipe(imageResize({
-            width : 320,
-            height : 180,
+            width : 1500,
+            height : 1000,
             crop : false,
             upscale : true
         }))
@@ -39,7 +39,7 @@ gulp.task('img-resize', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('src/img/*.jpg')
+    return gulp.src('src/img/slider/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist'))
 });
