@@ -12,8 +12,12 @@
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-imagemin": "^6.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-jpeg-xr": "^1.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4"
   },
   "browserslist": [
     "last 2 versions",

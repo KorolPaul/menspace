@@ -5,7 +5,9 @@ const gulp = require('gulp'),
       autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync'),
       imagemin = require('gulp-imagemin'),
-      imageResize = require('gulp-image-resize');
+      imageResize = require('gulp-image-resize'),
+      cleanCSS = require('gulp-clean-css'),
+      uglify = require('gulp-uglify-es').default;
 
 gulp.task('sync', function () {
     browserSync({
@@ -19,7 +21,7 @@ gulp.task('sync', function () {
 
 gulp.task('sass', function () {
     return gulp.src('src/css/scss/**/*.scss')
-        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer({
             cascade: false
         }))
@@ -39,11 +41,25 @@ gulp.task('img-resize', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('src/img/slider/*')
+    return gulp.src('src/img/*.jpg')
         .pipe(imagemin())
         .pipe(gulp.dest('dist'))
 });
 
+gulp.task('minify-css', () => {
+    return gulp.src('style.css')
+      .pipe(cleanCSS({debug: true, level: 2}, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+      }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify-js', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist'));;
+});
 
 gulp.task('watch', function () {
     gulp.watch(['src/css/scss/**/*.scss'], gulp.parallel('sass'));
