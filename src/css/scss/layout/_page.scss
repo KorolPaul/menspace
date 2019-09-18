@@ -116,9 +116,6 @@ body {
         flex-direction: column;
         justify-content: center;
         padding-top: 150px;
-        @include tablet {
-            padding-top: 100px;
-        }
     }
     &__contacts {
         padding-top: 140px;

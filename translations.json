@@ -1,4 +1,4 @@
-﻿{
+{
     "en":{
         "menu":"Menu",
         "home":"Home",
@@ -89,28 +89,21 @@
                 "prcs":[
                     {
                         "price1":{
-                            "title":"Haircut normal",
+                            "title":"Straight razor shave",
                             "subtitle":"",
                             "price":"25€"
                         }
                     },
                     {
                         "price2":{
-                            "title":"Haircut machine",
+                            "title":"Machine shave",
                             "subtitle":"",
                             "price":"20€"
                         }
                     },
                     {
                         "price3":{
-                            "title":"Haircut machine + shaver",
-                            "subtitle":"",
-                            "price":"35€"
-                        }
-                    },
-                    {
-                        "price4":{
-                            "title":"Haircut child",
+                            "title":"Machine shave + shaver",
                             "subtitle":"",
                             "price":"35€"
                         }
@@ -129,7 +122,7 @@
                     },
                     {
                         "price2":{
-                            "title":"Alising",
+                            "title":"Hair straightening",
                             "subtitle":"",
                             "price":"30€"
                         }
@@ -670,30 +663,23 @@
                 "prcs":[
                     {
                         "price1":{
-                            "title":"Haircut normal",
+                            "title":"Barba a navalha",
                             "subtitle":"",
                             "price":"25€"
                         }
                     },
                     {
                         "price2":{
-                            "title":"Haircut machine",
+                            "title":"Barba a máquina",
                             "subtitle":"",
                             "price":"20€"
                         }
                     },
                     {
                         "price3":{
-                            "title":"Haircut machine + shaver",
+                            "title":"Barba a máquina + shaver",
                             "subtitle":"",
-                            "price":"35€"
-                        }
-                    },
-                    {
-                        "price4":{
-                            "title":"Haircut child",
-                            "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     }
                 ]
@@ -1147,9 +1133,9 @@
             "title2":"PARCEIROS"
         },
         "conts":{
-            "title1":"CONTACT",
+            "title1":"CONTATOS",
             "title2":"INFO",
-            "getintouch":"GET IN TOUCH",
+            "getintouch":"ENTRAR EM CONTATO",
             "name":"Seu nome",
             "email":"Seu email",
             "subject":"Assunto",
@@ -1158,8 +1144,8 @@
             "missingFields":"Campos em falta!",
             "success":"A sua mensagem foi enviada com sucesso!"
         },
-        "terms":"Terms of Use",
-        "privacy":"Privacy Policy"
+        "terms":"Termos de Utilização",
+        "privacy":"Politica de Privacidade"
     },
     "ru":{
         "menu":"Меню",
@@ -1171,10 +1157,10 @@
         "partners":"Партнёры",
         "contact":"Контакты",
         "followUs":"Следите за нами",
-        "opening1":"С Понедельника до Субботы",
+        "opening1":"С Понедельника по Субботу",
         "opening2":"с 09:00 до 21:00",
-        "apointment1":"Make an",
-        "apointment2":"appointment",
+        "apointment1":"Сделать",
+        "apointment2":"запись",
         "about":{
             "title1":"О",
             "title2":"НАС",
@@ -1232,7 +1218,7 @@
                     },
                     {
                         "price3":{
-                            "title":"Haircut machine + shaver",
+                            "title":"Стрижка под машинку + шейвер",
                             "subtitle":"",
                             "price":"35€"
                         }
@@ -1251,28 +1237,21 @@
                 "prcs":[
                     {
                         "price1":{
-                            "title":"Haircut normal",
+                            "title":"Стрижка бороды опасной бритвой",
                             "subtitle":"",
                             "price":"25€"
                         }
                     },
                     {
                         "price2":{
-                            "title":"Haircut machine",
+                            "title":"Стрижка бороды машинкой",
                             "subtitle":"",
                             "price":"20€"
                         }
                     },
                     {
                         "price3":{
-                            "title":"Haircut machine + shaver",
-                            "subtitle":"",
-                            "price":"35€"
-                        }
-                    },
-                    {
-                        "price4":{
-                            "title":"Haircut child",
+                            "title":"Стрижка бороды машинкой + шейвер",
                             "subtitle":"",
                             "price":"35€"
                         }
@@ -1284,28 +1263,28 @@
                 "prcs":[
                     {
                         "price1":{
-                            "title":"Camouflage",
+                            "title":"Камуфляж",
                             "subtitle":"",
                             "price":"30€"
                         }
                     },
                     {
                         "price2":{
-                            "title":"Alising",
+                            "title":"Выпрямление",
                             "subtitle":"",
                             "price":"30€"
                         }
                     },
                     {
                         "price3":{
-                            "title":"Manicure",
+                            "title":"Маникюр",
                             "subtitle":"",
                             "price":"15€"
                         }
                     },
                     {
                         "price4":{
-                            "title":"Pedicure",
+                            "title":"Педикюр",
                             "subtitle":"",
                             "price":"25€"
                         }
@@ -1724,22 +1703,22 @@
             }
         ],
         "parts":{
-            "title1":"OUR",
-            "title2":"PARTNERS"
+            "title1":"НАШИ",
+            "title2":"ПАРТНЁРЫ"
         },
         "conts":{
-            "title1":"CONTACT",
-            "title2":"INFO",
-            "getintouch":"GET IN TOUCH",
-            "name":"Your name",
-            "email":"Your email",
-            "subject":"Subject",
-            "message":"Your message",
-            "send":"SEND",
-            "missingFields":"There are some missing fields!",
-            "success":"Your message was sent with success!"
+            "title1":"КОНТАКТЫ",
+            "title2":"ИНФОРМАЦИЯ",
+            "getintouch":"СВЯЗАТЬСЯ",
+            "name":"Ваше имя",
+            "email":"Ваш емайл",
+            "subject":"Тема",
+            "message":"Ваше сообщение",
+            "send":"ОТПРАВИТЬ",
+            "missingFields":"Есть незаполненные поля!",
+            "success":"Ваше сообщение было отправлено!"
         },
-        "terms":"Terms of Use",
-        "privacy":"Privacy Policy"
+        "terms":"Условия использования",
+        "privacy":"Политика конфиденциальности"
     }
 }
