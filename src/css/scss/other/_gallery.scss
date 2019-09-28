@@ -59,6 +59,7 @@
     }
     &_info-image-wrapper {
         position: relative;
+        min-height: 200px;
         @include desktop {
             height: 100%;
         }

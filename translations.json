@@ -72,14 +72,14 @@
                         "price3":{
                             "title":"Haircut machine + shaver",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     },
                     {
                         "price4":{
                             "title":"Haircut child",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     }
                 ]
@@ -91,21 +91,21 @@
                         "price1":{
                             "title":"Straight razor shave",
                             "subtitle":"",
-                            "price":"25€"
+                            "price":"20€"
                         }
                     },
                     {
                         "price2":{
                             "title":"Machine shave",
                             "subtitle":"",
-                            "price":"20€"
+                            "price":"10€"
                         }
                     },
                     {
                         "price3":{
                             "title":"Machine shave + shaver",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     }
                 ]
@@ -646,14 +646,14 @@
                         "price3":{
                             "title":"Corte à máquina + shaver",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     },
                     {
                         "price4":{
                             "title":"Corte criança",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     }
                 ]
@@ -665,14 +665,14 @@
                         "price1":{
                             "title":"Barba a navalha",
                             "subtitle":"",
-                            "price":"25€"
+                            "price":"20€"
                         }
                     },
                     {
                         "price2":{
                             "title":"Barba a máquina",
                             "subtitle":"",
-                            "price":"20€"
+                            "price":"10€"
                         }
                     },
                     {
@@ -1220,14 +1220,14 @@
                         "price3":{
                             "title":"Стрижка под машинку + шейвер",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     },
                     {
                         "price4":{
                             "title":"Детская стрижка",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     }
                 ]
@@ -1239,21 +1239,21 @@
                         "price1":{
                             "title":"Стрижка бороды опасной бритвой",
                             "subtitle":"",
-                            "price":"25€"
+                            "price":"20€"
                         }
                     },
                     {
                         "price2":{
                             "title":"Стрижка бороды машинкой",
                             "subtitle":"",
-                            "price":"20€"
+                            "price":"10€"
                         }
                     },
                     {
                         "price3":{
                             "title":"Стрижка бороды машинкой + шейвер",
                             "subtitle":"",
-                            "price":"35€"
+                            "price":"15€"
                         }
                     }
                 ]

@@ -25,7 +25,9 @@ $max-height: 980px;
     }
     &_wrapper {
         @include tablet {
-            display: contents;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
