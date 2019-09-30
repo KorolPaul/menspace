@@ -60,11 +60,11 @@ $(document).ready(function () {
     /* Gallery slider */
     var gallerySlider = $('.slider').owlCarousel({
         loop: true,
-        margin: 10,
+        margin: 0,
         nav: false,
         nav: true,
         dots: false,
-        items: 3,
+        items: 6,
         navContainer: $('.gallery_buttons'),
         navText: ['prev','next'],
     });
