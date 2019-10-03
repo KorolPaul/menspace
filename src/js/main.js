@@ -60,7 +60,7 @@ $(document).ready(function () {
     /* Gallery slider */
     var gallerySlider = $('.slider').owlCarousel({
         loop: true,
-        margin: 10,
+        margin: 0,
         nav: false,
         nav: true,
         dots: false,

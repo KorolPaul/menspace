@@ -10,7 +10,8 @@
     }
     &_image {
         max-width: calc(100vw - 130px);
-        opacity: .99;
+        position: relative;
+        z-index: 1;
         @include tablet {
             filter: grayscale(1) brightness(.8);
             transition: .2s ease-in-out filter;

@@ -21,5 +21,10 @@
     }
     &_icon {
         width: 105px;
+        transition: .2s ease-in-out filter;
+
+        &:hover {
+            filter: brightness(2);
+        }
     }
 }

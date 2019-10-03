@@ -1,9 +1,9 @@
 $max-height: 980px;
 .services {
     width: 100%;
-    @include mediaHeight($max-height) {
-        width: 690px;
-    }
+    //@include mediaHeight($max-height) {
+    //    width: 690px;
+    //}
 
     &_title {
         margin: 0 0 40px;
@@ -37,9 +37,9 @@ $max-height: 980px;
     @include tablet {
         width: 45%;
     }
-    @include mediaHeight($max-height) {
-        width: 100%;
-    }
+    //@include mediaHeight($max-height) {
+    //    width: 100%;
+    //}
 
     &_title {
         margin: 0 0 20px;
