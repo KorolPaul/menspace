@@ -233,9 +233,9 @@ $(document).ready(function () {
             
         }
     });
-    if (!isMobile) {
-        $('.showcase_video').removeAttr('controls');
-    }
+    //if (!isMobile) {
+    //    //$('.showcase_video').removeAttr('controls');
+    //}
     document.querySelector('video').load();
 
     /* Popup */
