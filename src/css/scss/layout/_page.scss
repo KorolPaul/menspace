@@ -19,7 +19,7 @@ body {
     transform: translateY(-100%) rotateX(45deg);
     transform-origin: center 0%;
     transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
-    will-change: transfrorm;
+    will-change: transform;
     @include tablet {
         padding: 100px 40px 40px;
     }
