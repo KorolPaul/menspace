@@ -97,7 +97,7 @@ $(document).ready(function () {
     });
 
     /* Counter */
-    var $counter = $('.appointment_button');
+    var $counter = $('.appointment_button-content');
     function generateSymbol() {
         return Math.random().toString(36).substring(7).substring(0, 1);
     }

@@ -20,24 +20,24 @@
         text-align: center;
         padding: 0;
         position: relative;
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: 80px;
-            width: 80px;
-            margin: -40px 0 0 -40px;
-            background: rgba($bright_color, .8);
-            border-radius: 50%;
-            animation: 1.8s radialWave linear infinite;
-            z-index: -1;
-        }
-        &::after {
-            animation-delay: .9s;
-        }
+    }
+    &_button-shadow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 80px;
+        width: 80px;
+        margin: -40px 0 0 -40px;
+        background: rgba($bright_color, .8);
+        border-radius: 50%;
+        animation: 1.8s radialWave linear infinite;
+        opacity: 1;
+        transform: scale(.1);
+        will-change: auto;
+        z-index: -1;
+    }
+    &_button-shadow + &_button-shadow {
+        animation-delay: .9s;
     }
     &_title {
         font-family: $font-family__heading;

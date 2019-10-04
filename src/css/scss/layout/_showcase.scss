@@ -24,7 +24,6 @@
         z-index: 2;
         @include tablet {
             display: block;
-            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;

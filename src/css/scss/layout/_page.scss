@@ -16,7 +16,7 @@ body {
     right: 0;
     top: 0;
     padding: 100px 20px 40px;
-    transform: translateY(-100%) rotateX(45deg);
+    transform: translateY(-100%) ;
     transform-origin: center 0%;
     transition: .5s ease-in-out transform, .5s ease-in-out transform-origin;
     will-change: transform;
@@ -52,6 +52,10 @@ body {
 
         &.active {
             z-index: 3;
+            transform: translateY(0) rotateX(0deg);
+        }
+        &.active ~ & {
+            transform: translateY(100%) rotateX(0deg);
         }
     }
     &__about {
