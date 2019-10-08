@@ -189,6 +189,8 @@
     &_progress-value {
         height: 100%;
         background: $bright_color;
+        width: 0;
+        transition: .2s ease-in-out width;
     }
     &_count {
         height: 26px;

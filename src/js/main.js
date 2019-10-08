@@ -41,8 +41,10 @@ $(document).ready(function () {
     var $galleryInfoText = $('.gallery_info-text');
     var $galleryCount = $('.gallery_count-value');
     var $galleryCountTotal = $('.gallery_count-total');
+    var $galleryProgress = $('.gallery_progress-value');
 
-    $galleryCountTotal.text($('.slider_column').children().length);
+    var gallerySlidersCount = $('.slider_item').length;
+    $galleryCountTotal.text(gallerySlidersCount);
 
     $sliderItems.on('click', function (e) {
         $galleryImage.attr('src', '');
@@ -52,10 +54,15 @@ $(document).ready(function () {
         $galleryImage.attr('src', src);
 
         $galleryCount.text($(this).data('number'));
+        drawProgress($(this).data('number'));
 
         $sliderItems.removeClass('active');
         $(this).addClass('active');
     });
+
+    function drawProgress(page) {
+        $galleryProgress.css('width', 100 / gallerySlidersCount * page + '%');
+    } 
 
     /* Gallery slider */
     var gallerySlider = $('.slider').owlCarousel({
@@ -66,7 +73,7 @@ $(document).ready(function () {
         dots: false,
         items: 6,
         navContainer: $('.gallery_buttons'),
-        navText: ['prev','next'],
+        navText: ['prev','next']
     });
 
     /* Prices slider */
