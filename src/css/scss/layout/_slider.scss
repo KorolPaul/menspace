@@ -1,4 +1,8 @@
 .slider {
+    @include desktop {
+        height: 100%;
+    }
+
     &_column {
         width: 100%;
         @include tablet {
